@@ -76,9 +76,10 @@ div .ont > button:hover{
     display: none;
 }
 
+
 iframe {
     background-color: white;
-    display: block;
+    display: none;
     margin: auto;
     height: 63vh;
     width: 60vw;

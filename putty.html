@@ -14,7 +14,7 @@
         <div class="ont">
             <h4>Qual é o modelo de ONT?</h4>
             <h6>Em caso de dúvida sobre como verificar qual é o modelo de ONT, clique <a href="ont.hmtl">aqui</a></h6>
-            <button id="7342v1">Alcatel 7342</button>
+            <button id="7342v1" onclick="mostraIframe()">Alcatel 7342</button>
             <button id="alcatelv1">Alcatel 7360/7302</button>
             <button id="huaweiv1">Huawei</button>
         </div>
@@ -27,13 +27,14 @@
         </div>
     </div>
     <div class="iframe">
-        <iframe src="7342v1.html" frameborder="1"></iframe>
+        <iframe id="frame" src="7342v1.html" frameborder="1"></iframe>
 
     </div>
 </body>
 <script>
     /*sei que está feio e redundante o código, porém fiz somente para demonstração, em caso do projeto ir adiante o código será mudado*/
-    function mostraOpcao(){
+    /*GAMBIARRA*/
+    function mostraOpcao(){ /*Coringuei enquanto criava o código, até eu descobrir que tinha esquecido de colocar function na frente do nome da função *emoji de palhaço**/
         document.getElementsByClassName("ont")[1].style.display='none';
         document.getElementsByClassName("ont")[0].style.display='block';
         document.getElementById("vivo1").style.backgroundColor="#660099";
@@ -53,6 +54,10 @@
         document.getElementById("vivo1").style.backgroundColor="white";
         document.getElementById("vivo1").style.color="black";
         document.getElementById("vivo1").style.borderRadius="none";
+    }
+
+    function mostraIframe(){
+        document.getElementById("frame").style.display='block';
     }
 
 </script>
