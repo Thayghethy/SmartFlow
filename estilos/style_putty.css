@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #660099;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.region {
+    margin: auto;
+    padding: 100px;
+    background-color: white;
+    border-radius: 50px ;
+    margin-top: 50px;
+    height: 70%;
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+
+h4 {
+    background-color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    border-radius: 2px gray ;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+button:hover {
+    box-shadow: 1px 1px black;
+    cursor: pointer;
+    background-color: #660099;
+    border-radius: 3px;
+    transition: .3s ease-in-out;
+    color: white;
+}
+
+div .ont > h6, a, button {
+    text-decoration: none;
+    background-color: white;
+}
+
+div .ont > button {
+    background-color: white;
+    border: none;
+    border-radius: 2px gray ;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+div .ont > h6 {
+    font-size: .9em;
+}
+
+div .ont > button:hover{
+    box-shadow: 1px 1px black;
+    cursor: pointer;
+    background-color: #660099;
+    border-radius: 3px;
+    transition: .3s ease-in-out;
+    color: white;
+}
+
+.ont {
+    background-color: white;
+    display: none;
+}
+
+iframe {
+    background-color: white;
+    display: block;
+    margin: auto;
+    height: 63vh;
+    width: 60vw;
+    border-radius: 50px;
+    padding: 5px;
+    margin-top: 10px;
+}

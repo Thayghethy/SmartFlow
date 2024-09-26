@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarme via Putty</title>
+    <link rel="stylesheet" href="estilos/style_putty.css">
+</head>
+<body>
+    <div class="region">
+        <h4>Qual região é o caso?</h4>
+        <button id="vivo1" onclick="mostraOpcao()">Vivo 1</button>
+        <button id="vivo2" onclick="mostraOpcao2()">Vivo 2</button><br>
+        <div class="ont">
+            <h4>Qual é o modelo de ONT?</h4>
+            <h6>Em caso de dúvida sobre como verificar qual é o modelo de ONT, clique <a href="ont.hmtl">aqui</a></h6>
+            <button id="7342v1">Alcatel 7342</button>
+            <button id="alcatelv1">Alcatel 7360/7302</button>
+            <button id="huaweiv1">Huawei</button>
+        </div>
+        <div class="ont">
+            <h4>Qual é o modelo de ONT?</h4>
+            <h6>Em caso de dúvida sobre como verificar qual é o modelo de ONT, clique <a href="ont.hmtl">aqui</a></h6>
+            <button id="7342v2">Alcatel 7342</button>
+            <button id="alcatelv2">Alcatel 7360/7302</button>
+            <button id="huaweiv2">Huawei</button>
+        </div>
+    </div>
+    <div class="iframe">
+        <iframe src="7342v1.html" frameborder="1"></iframe>
+
+    </div>
+</body>
+<script>
+    /*sei que está feio e redundante o código, porém fiz somente para demonstração, em caso do projeto ir adiante o código será mudado*/
+    function mostraOpcao(){
+        document.getElementsByClassName("ont")[1].style.display='none';
+        document.getElementsByClassName("ont")[0].style.display='block';
+        document.getElementById("vivo1").style.backgroundColor="#660099";
+        document.getElementById("vivo1").style.color="white";
+        document.getElementById("vivo1").style.borderRadius="3px";
+        document.getElementById("vivo2").style.backgroundColor="white";
+        document.getElementById("vivo2").style.color="black";
+        document.getElementById("vivo2").style.borderRadius="none";
+    }
+
+    function mostraOpcao2(){
+        document.getElementsByClassName("ont")[0].style.display='none';
+        document.getElementsByClassName("ont")[1].style.display='block';
+        document.getElementById("vivo2").style.backgroundColor="#660099";
+        document.getElementById("vivo2").style.color="white";
+        document.getElementById("vivo2").style.borderRadius="3px";
+        document.getElementById("vivo1").style.backgroundColor="white";
+        document.getElementById("vivo1").style.color="black";
+        document.getElementById("vivo1").style.borderRadius="none";
+    }
+
+</script>
+</html>

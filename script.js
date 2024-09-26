@@ -1,5 +1,5 @@
 const articles = [
-    { title: "Como verificar alarme via putty", content: "Aqui estão os passos para verificar um alarme via putty..." },
+    { title: "Como verificar alarme via putty", content: "Aqui estão os passos para verificar um alarme via putty...", link:"putty.html" },
     { title: "Como resetar o modem", content: "Para resetar o modem, siga os seguintes passos..." },
     { title: "Como configurar uma carga", content: "Este guia explica como configurar a carga do cliente..." },
     { title: "Sem sincronismo", content: "Para sem sincronismo, utilize esse guia", link: "sem-sincro.html", keywords: ["luz piscando lentamente", "HGU", "piscando", "sem conexão"] },
