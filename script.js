@@ -1,3 +1,4 @@
+//SCRIPT DA TELA INICIAL
 const articles = [
     { title: "Como verificar alarme via putty", content: "Aqui estão os passos para verificar um alarme via putty...", link:"putty.html" },
     { title: "Como resetar o modem", content: "Para resetar o modem, siga os seguintes passos..." },
@@ -26,3 +27,115 @@ document.getElementById('searchBox').addEventListener('input', function() {
         </div>
     `).join('');
 });
+
+//SCRIPT DA PÁGINA DO PUTTY
+
+    /*sei que está feio e redundante o código, porém fiz somente para demonstração, em caso do projeto ir adiante o código será mudado*/
+    /*GAMBIARRA*/
+    function mostraOpcao(){ 
+        document.getElementsByClassName("ont")[1].style.display='none';
+        document.getElementsByClassName("ont")[0].style.display='block';
+        document.getElementById("vivo1").style.backgroundColor="#660099";
+        document.getElementById("vivo1").style.color="white";
+        document.getElementById("vivo1").style.borderRadius="3px";
+        document.getElementById("vivo2").style.backgroundColor="white";
+        document.getElementById("vivo2").style.color="black";
+        document.getElementById("vivo2").style.borderRadius="none";
+        document.getElementById("frame7342v2").style.display='none';
+        document.getElementById("frameAlcatelv2").style.display='none';
+        document.getElementById("frameHuaweiv2").style.display='none';
+    }
+
+    function mostraOpcao2(){
+        document.getElementsByClassName("ont")[0].style.display='none';
+        document.getElementsByClassName("ont")[1].style.display='block';
+        document.getElementById("vivo2").style.backgroundColor="#660099";
+        document.getElementById("vivo2").style.color="white";
+        document.getElementById("vivo2").style.borderRadius="3px";
+        document.getElementById("vivo1").style.backgroundColor="white";
+        document.getElementById("vivo1").style.color="black";
+        document.getElementById("vivo1").style.borderRadius="none";
+        document.getElementById("frame7342v1").style.display='none';
+        document.getElementById("frameAlcatelv1").style.display='none';
+        document.getElementById("frameHuaweiv1").style.display='none';
+    }
+
+    //TUTO VIVO1
+    function mostraIframe(){
+        document.getElementById("frame7342v1").style.display='block';
+        document.getElementById("frameAlcatelv1").style.display='none';
+        document.getElementById("frameHuaweiv1").style.display='none';
+        document.getElementById("7342v1").style.backgroundColor="#660099";
+        document.getElementById("7342v1").style.color="white";
+        document.getElementById("7342v1").style.borderRadius="3px";
+        document.getElementById("alcatelv1").style.backgroundColor="white";
+        document.getElementById("alcatelv1").style.color="black";
+        document.getElementById("huaweiv1").style.backgroundColor='white';
+        document.getElementById("huaweiv1").style.color='black';
+    }
+
+    function mostraIframe1(){
+        document.getElementById("frameAlcatelv1").style.display='block';
+        document.getElementById("frame7342v1").style.display='none';
+        document.getElementById("frameHuaweiv1").style.display='none';
+        document.getElementById("alcatelv1").style.backgroundColor="#660099";
+        document.getElementById("alcatelv1").style.color="white";
+        document.getElementById("alcatelv1").style.borderRadius="3px";
+        document.getElementById("7342v1").style.backgroundColor="white";
+        document.getElementById("7342v1").style.color="black";
+        document.getElementById("huaweiv1").style.backgroundColor='white';
+        document.getElementById("huaweiv1").style.color='black';
+    }
+
+    function mostraIframe2(){
+        document.getElementById("frameHuaweiv1").style.display='block';
+        document.getElementById("frame7342v1").style.display='none';
+        document.getElementById("frameAlcatelv1").style.display='none';
+        document.getElementById("huaweiv1").style.backgroundColor='#660099';
+        document.getElementById("huaweiv1").style.color='white';
+        document.getElementById("huaweiv1").style.borderRadius='3px';
+        document.getElementById("7342v1").style.color='black';
+        document.getElementById("7342v1").style.backgroundColor='white';
+        document.getElementById("alcatelv1").style.color='black';
+        document.getElementById("alcatelv1").style.backgroundColor='white';
+    }
+
+    //TUTO VIVO2
+    function mostraIframe3(){
+        document.getElementById("frame7342v2").style.display='block';
+        document.getElementById("frameAlcatelv2").style.display='none';
+        document.getElementById("frameHuaweiv2").style.display='none';
+        document.getElementById("7342v2").style.backgroundColor="#660099";
+        document.getElementById("7342v2").style.color="white";
+        document.getElementById("7342v2").style.borderRadius="3px";
+        document.getElementById("alcatelv2").style.backgroundColor="white";
+        document.getElementById("alcatelv2").style.color="black";
+        document.getElementById("huaweiv2").style.backgroundColor='white';
+        document.getElementById("huaweiv2").style.color='black';
+    }
+
+    function mostraIframe4(){
+        document.getElementById("frameAlcatelv2").style.display='block';
+        document.getElementById("frame7342v2").style.display='none';
+        document.getElementById("frameHuaweiv2").style.display='none';
+        document.getElementById("alcatelv2").style.backgroundColor="#660099";
+        document.getElementById("alcatelv2").style.color="white";
+        document.getElementById("alcatelv2").style.borderRadius="3px";
+        document.getElementById("7342v2").style.backgroundColor="white";
+        document.getElementById("7342v2").style.color="black";
+        document.getElementById("huaweiv2").style.backgroundColor='white';
+        document.getElementById("huaweiv2").style.color='black';
+    }
+
+    function mostraIframe5(){
+        document.getElementById("frameHuaweiv2").style.display='block';
+        document.getElementById("frame7342v2").style.display='none';
+        document.getElementById("frameAlcatelv2").style.display='none';
+        document.getElementById("huaweiv2").style.backgroundColor='#660099';
+        document.getElementById("huaweiv2").style.color='white';
+        document.getElementById("huaweiv2").style.borderRadius='3px';
+        document.getElementById("7342v2").style.color='black';
+        document.getElementById("7342v2").style.backgroundColor='white';
+        document.getElementById("alcatelv2").style.color='black';
+        document.getElementById("alcatelv2").style.backgroundColor='white';
+    }
