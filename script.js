@@ -41,7 +41,6 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("vivo2").style.backgroundColor="white";
         document.getElementById("vivo2").style.color="black";
         document.getElementById("vivo2").style.borderRadius="none";
-        document.getElementById("frame7342v2").style.display='none';
         document.getElementById("frameAlcatelv2").style.display='none';
         document.getElementById("frameHuaweiv2").style.display='none';
     }
@@ -101,22 +100,9 @@ document.getElementById('searchBox').addEventListener('input', function() {
     }
 
     //TUTO VIVO2
-    function mostraIframe3(){
-        document.getElementById("frame7342v2").style.display='block';
-        document.getElementById("frameAlcatelv2").style.display='none';
-        document.getElementById("frameHuaweiv2").style.display='none';
-        document.getElementById("7342v2").style.backgroundColor="#660099";
-        document.getElementById("7342v2").style.color="white";
-        document.getElementById("7342v2").style.borderRadius="3px";
-        document.getElementById("alcatelv2").style.backgroundColor="white";
-        document.getElementById("alcatelv2").style.color="black";
-        document.getElementById("huaweiv2").style.backgroundColor='white';
-        document.getElementById("huaweiv2").style.color='black';
-    }
 
     function mostraIframe4(){
         document.getElementById("frameAlcatelv2").style.display='block';
-        document.getElementById("frame7342v2").style.display='none';
         document.getElementById("frameHuaweiv2").style.display='none';
         document.getElementById("alcatelv2").style.backgroundColor="#660099";
         document.getElementById("alcatelv2").style.color="white";
@@ -129,7 +115,6 @@ document.getElementById('searchBox').addEventListener('input', function() {
 
     function mostraIframe5(){
         document.getElementById("frameHuaweiv2").style.display='block';
-        document.getElementById("frame7342v2").style.display='none';
         document.getElementById("frameAlcatelv2").style.display='none';
         document.getElementById("huaweiv2").style.backgroundColor='#660099';
         document.getElementById("huaweiv2").style.color='white';
