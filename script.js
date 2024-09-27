@@ -107,8 +107,6 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("alcatelv2").style.backgroundColor="#660099";
         document.getElementById("alcatelv2").style.color="white";
         document.getElementById("alcatelv2").style.borderRadius="3px";
-        document.getElementById("7342v2").style.backgroundColor="white";
-        document.getElementById("7342v2").style.color="black";
         document.getElementById("huaweiv2").style.backgroundColor='white';
         document.getElementById("huaweiv2").style.color='black';
     }
@@ -119,8 +117,6 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("huaweiv2").style.backgroundColor='#660099';
         document.getElementById("huaweiv2").style.color='white';
         document.getElementById("huaweiv2").style.borderRadius='3px';
-        document.getElementById("7342v2").style.color='black';
-        document.getElementById("7342v2").style.backgroundColor='white';
         document.getElementById("alcatelv2").style.color='black';
         document.getElementById("alcatelv2").style.backgroundColor='white';
     }
