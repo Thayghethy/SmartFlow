@@ -43,6 +43,7 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("vivo2").style.borderRadius="none";
         document.getElementById("frameAlcatelv2").style.display='none';
         document.getElementById("frameHuaweiv2").style.display='none';
+        document.getElementById("abreTela").style.display='none';
     }
 
     function mostraOpcao2(){
@@ -57,6 +58,19 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("frame7342v1").style.display='none';
         document.getElementById("frameAlcatelv1").style.display='none';
         document.getElementById("frameHuaweiv1").style.display='none';
+        document.getElementById("abreTela").style.display='none';
+    }
+
+    function aumentaTela(){
+        document.getElementsByClassName("region")[0].style.display='none';
+        document.getElementById("abreTela").style.display='none';
+        document.getElementById("fechaTela").style.display='block';
+    }
+
+    function diminuiTela(){
+        document.getElementsByClassName("region")[0].style.display='block';
+        document.getElementById("abreTela").style.display='block';
+        document.getElementById("fechaTela").style.display='none';
     }
 
     //TUTO VIVO1
@@ -71,6 +85,7 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("alcatelv1").style.color="black";
         document.getElementById("huaweiv1").style.backgroundColor='white';
         document.getElementById("huaweiv1").style.color='black';
+        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
     }
 
     function mostraIframe1(){
@@ -84,6 +99,7 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("7342v1").style.color="black";
         document.getElementById("huaweiv1").style.backgroundColor='white';
         document.getElementById("huaweiv1").style.color='black';
+        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
     }
 
     function mostraIframe2(){
@@ -97,6 +113,7 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("7342v1").style.backgroundColor='white';
         document.getElementById("alcatelv1").style.color='black';
         document.getElementById("alcatelv1").style.backgroundColor='white';
+        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
     }
 
     //TUTO VIVO2
@@ -109,6 +126,7 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("alcatelv2").style.borderRadius="3px";
         document.getElementById("huaweiv2").style.backgroundColor='white';
         document.getElementById("huaweiv2").style.color='black';
+        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
     }
 
     function mostraIframe5(){
@@ -119,4 +137,5 @@ document.getElementById('searchBox').addEventListener('input', function() {
         document.getElementById("huaweiv2").style.borderRadius='3px';
         document.getElementById("alcatelv2").style.color='black';
         document.getElementById("alcatelv2").style.backgroundColor='white';
+        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
     }

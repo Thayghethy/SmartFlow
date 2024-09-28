@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alarme via Putty</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="estilos/style_putty.css">
     <script src="script.js"></script>
 </head>
@@ -26,7 +27,14 @@
             <button id="huaweiv2" onclick="mostraIframe5()">Huawei</button>
         </div>
     </div>
+    
     <div class="iframe">
+        <span id="abreTela" class="material-symbols-outlined" onclick="aumentaTela()">
+            open_in_full
+            </span>
+            <span id="fechaTela" class="material-symbols-outlined" onclick="diminuiTela()">
+                close_fullscreen
+                </span>
         <iframe id="frame7342v1" src="7342v1.html" frameborder="1"></iframe>
         <iframe id="frameAlcatelv1" src="alcatelv1.html" frameborder="1"></iframe>
         <iframe id="frameHuaweiv1" src="huaweiv1.html" frameborder="1"></iframe>
