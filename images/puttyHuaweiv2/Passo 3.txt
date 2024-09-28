@@ -1,5 +1,0 @@
-Assim, o putty já estará pronto para buscar o alarme.
-Para buscarmos o alarme de vivo 2, é necessário o Ip do Armário, que conseguimos no SDU na aba "Informações Rede Interna" ou no Wise, na aba "Informações TBS"
-
-Com o ip do armário, colocamos no Putty o comando "ssh (Ip do armário)".
-Exemplo:

@@ -1,3 +1,0 @@
-Após dar o último Enter, será aberto nas linhas abaixo, será aberto
-uma planilha, que contém todos os gpons que estão alarmando dentro do Rin que está sendo procurado.
-Em cada quadrado é possível identifica ro GPON procurando na linha "ONT SN" e localizar o GPON que está entre parênteses. Para identificar o alarme de um GPON especifíco, primeiro deve-se localiza-lo entre os demais que apareceram. Ao localizar o GPON, é possível identificar o Slot e Porta em que se encontra, olhando na linha F/S/P, em que os dois últimos são respectivamente Slot/Porta.

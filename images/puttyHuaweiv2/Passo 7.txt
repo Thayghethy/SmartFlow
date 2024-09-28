@@ -1,5 +1,0 @@
-Por exemplo: 16/3
-O número 16 é o numero do Slot, o 3 precisá ser somado do numero +1, para localizar o numero da porta, portanto a porta é 4(3+1).
-Toda alarme Huawei vivo 2, precisa ser somado do +1 na porta para identificar a posição.
-Abaixo dos alarmes, é possível identificar o Armário e Rin que está alarmando
- Exemplo: armário M13 e Rin 417_418_419_422_423_430.
