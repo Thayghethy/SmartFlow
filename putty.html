@@ -6,42 +6,39 @@
     <title>Alarme via Putty</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="estilos/style_putty.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="region">
         <h4>Qual região é o caso?</h4>
-        <button id="vivo1" onclick="mostraOpcao()">Vivo 1</button>
-        <button id="vivo2" onclick="mostraOpcao2()">Vivo 2</button><br>
-        <div class="ont">
+        <button id="vivo1" onclick="toggleOptions(1)">Vivo 1</button>
+        <button id="vivo2" onclick="toggleOptions(2)">Vivo 2</button>
+        
+        <div class="ont" id="ont-vivo1">
             <h4>Qual é o modelo de ONT?</h4>
-            <h6>Em caso de dúvida sobre como verificar qual é o modelo/gerência de ONT, clique <a href="ont.hmtl">aqui</a></h6>
-            <button id="7342v1" onclick="mostraIframe()">Alcatel 7342</button>
-            <button id="alcatelv1" onclick="mostraIframe1()">Alcatel 7360/7302</button>
-            <button id="huaweiv1" onclick="mostraIframe2()">Huawei</button>
+            <h6>Em caso de dúvida sobre como verificar qual é o modelo/gerência de ONT, clique <a href="ont.html">aqui</a></h6>
+            <button onclick="showIframe('frame7342v1')">Alcatel 7342</button>
+            <button onclick="showIframe('frameAlcatelv1')">Alcatel 7360/7302</button>
+            <button onclick="showIframe('frameHuaweiv1')">Huawei</button>
         </div>
-        <div class="ont">
+        
+        <div class="ont" id="ont-vivo2">
             <h4>Qual é o modelo de ONT?</h4>
-            <h6>Em caso de dúvida sobre como verificar qual é o modelo de ONT, clique <a href="ont.hmtl">aqui</a></h6>
-            <button id="alcatelv2" onclick="mostraIframe4()">Alcatel</button>
-            <button id="huaweiv2" onclick="mostraIframe5()">Huawei</button>
+            <h6>Em caso de dúvida sobre como verificar qual é o modelo de ONT, clique <a href="ont.html">aqui</a></h6>
+            <button onclick="showIframe('frameAlcatelv2')">Alcatel</button>
+            <button onclick="showIframe('frameHuaweiv2')">Huawei</button>
         </div>
     </div>
-    
+
     <div class="iframe">
-        <span id="abreTela" class="material-symbols-outlined" onclick="aumentaTela()">
+        <span id="toggleFullScreen" class="material-symbols-outlined" onclick="toggleFullScreen()">
             open_in_full
-            </span>
-            <span id="fechaTela" class="material-symbols-outlined" onclick="diminuiTela()">
-                close_fullscreen
-                </span>
+        </span>
         <iframe id="frame7342v1" src="7342v1.html" frameborder="1"></iframe>
         <iframe id="frameAlcatelv1" src="alcatelv1.html" frameborder="1"></iframe>
         <iframe id="frameHuaweiv1" src="huaweiv1.html" frameborder="1"></iframe>
-
         <iframe id="frameAlcatelv2" src="alcatelv2.html" frameborder="1"></iframe>
         <iframe id="frameHuaweiv2" src="huaweiv2.html" frameborder="1"></iframe>
-
     </div>
 </body>
 </html>

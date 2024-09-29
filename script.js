@@ -30,112 +30,42 @@ document.getElementById('searchBox').addEventListener('input', function() {
 
 //SCRIPT DA PÁGINA DO PUTTY
 
-    /*sei que está feio e redundante o código, porém fiz somente para demonstração, em caso do projeto ir adiante o código será mudado*/
-    /*GAMBIARRA*/
-    function mostraOpcao(){ 
-        document.getElementsByClassName("ont")[1].style.display='none';
-        document.getElementsByClassName("ont")[0].style.display='block';
-        document.getElementById("vivo1").style.backgroundColor="#660099";
-        document.getElementById("vivo1").style.color="white";
-        document.getElementById("vivo1").style.borderRadius="3px";
-        document.getElementById("vivo2").style.backgroundColor="white";
-        document.getElementById("vivo2").style.color="black";
-        document.getElementById("vivo2").style.borderRadius="none";
-        document.getElementById("frameAlcatelv2").style.display='none';
-        document.getElementById("frameHuaweiv2").style.display='none';
-        document.getElementById("abreTela").style.display='none';
-    }
+// Mostra opções relevantes para Vivo 1 ou Vivo 2
+function toggleOptions(option) {
+    const ontVivo1 = document.getElementById('ont-vivo1');
+    const ontVivo2 = document.getElementById('ont-vivo2');
+    
+    ontVivo1.style.display = (option === 1) ? 'block' : 'none';
+    ontVivo2.style.display = (option === 2) ? 'block' : 'none';
+    
+    resetIframes();
+}
 
-    function mostraOpcao2(){
-        document.getElementsByClassName("ont")[0].style.display='none';
-        document.getElementsByClassName("ont")[1].style.display='block';
-        document.getElementById("vivo2").style.backgroundColor="#660099";
-        document.getElementById("vivo2").style.color="white";
-        document.getElementById("vivo2").style.borderRadius="3px";
-        document.getElementById("vivo1").style.backgroundColor="white";
-        document.getElementById("vivo1").style.color="black";
-        document.getElementById("vivo1").style.borderRadius="none";
-        document.getElementById("frame7342v1").style.display='none';
-        document.getElementById("frameAlcatelv1").style.display='none';
-        document.getElementById("frameHuaweiv1").style.display='none';
-        document.getElementById("abreTela").style.display='none';
-    }
+// Mostra Iframe selecionado e esconde outros
+function showIframe(frameId) {
+    resetIframes();
+    document.getElementById(frameId).style.display = 'block';
+    document.getElementById('toggleFullScreen').style.display = 'inline-block';
+}
 
-    function aumentaTela(){
-        document.getElementsByClassName("region")[0].style.display='none';
-        document.getElementById("abreTela").style.display='none';
-        document.getElementById("fechaTela").style.display='block';
-    }
+// Reseta iframes ao estado inicial
+function resetIframes() {
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => iframe.style.display = 'none');
+    document.getElementById('toggleFullScreen').style.display = 'none';
+}
 
-    function diminuiTela(){
-        document.getElementsByClassName("region")[0].style.display='block';
-        document.getElementById("abreTela").style.display='block';
-        document.getElementById("fechaTela").style.display='none';
+//Ativa tela cheia par ao ifrme e esconde menu
+function toggleFullScreen() {
+    const iframe = document.querySelector('iframe:not([style*="display: none"])');
+    const region = document.querySelector('.region');
+    
+    if (iframe) {
+        iframe.classList.toggle('fullscreen');
+        if (iframe.classList.contains('fullscreen')) {
+            region.style.display = 'none'; // esconde menu quando em tela cheia
+        } else {
+            region.style.display = 'block'; // mostra menu saindo da tela cheia
+        }
     }
-
-    //TUTO VIVO1
-    function mostraIframe(){
-        document.getElementById("frame7342v1").style.display='block';
-        document.getElementById("frameAlcatelv1").style.display='none';
-        document.getElementById("frameHuaweiv1").style.display='none';
-        document.getElementById("7342v1").style.backgroundColor="#660099";
-        document.getElementById("7342v1").style.color="white";
-        document.getElementById("7342v1").style.borderRadius="3px";
-        document.getElementById("alcatelv1").style.backgroundColor="white";
-        document.getElementById("alcatelv1").style.color="black";
-        document.getElementById("huaweiv1").style.backgroundColor='white';
-        document.getElementById("huaweiv1").style.color='black';
-        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
-    }
-
-    function mostraIframe1(){
-        document.getElementById("frameAlcatelv1").style.display='block';
-        document.getElementById("frame7342v1").style.display='none';
-        document.getElementById("frameHuaweiv1").style.display='none';
-        document.getElementById("alcatelv1").style.backgroundColor="#660099";
-        document.getElementById("alcatelv1").style.color="white";
-        document.getElementById("alcatelv1").style.borderRadius="3px";
-        document.getElementById("7342v1").style.backgroundColor="white";
-        document.getElementById("7342v1").style.color="black";
-        document.getElementById("huaweiv1").style.backgroundColor='white';
-        document.getElementById("huaweiv1").style.color='black';
-        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
-    }
-
-    function mostraIframe2(){
-        document.getElementById("frameHuaweiv1").style.display='block';
-        document.getElementById("frame7342v1").style.display='none';
-        document.getElementById("frameAlcatelv1").style.display='none';
-        document.getElementById("huaweiv1").style.backgroundColor='#660099';
-        document.getElementById("huaweiv1").style.color='white';
-        document.getElementById("huaweiv1").style.borderRadius='3px';
-        document.getElementById("7342v1").style.color='black';
-        document.getElementById("7342v1").style.backgroundColor='white';
-        document.getElementById("alcatelv1").style.color='black';
-        document.getElementById("alcatelv1").style.backgroundColor='white';
-        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
-    }
-
-    //TUTO VIVO2
-
-    function mostraIframe4(){
-        document.getElementById("frameAlcatelv2").style.display='block';
-        document.getElementById("frameHuaweiv2").style.display='none';
-        document.getElementById("alcatelv2").style.backgroundColor="#660099";
-        document.getElementById("alcatelv2").style.color="white";
-        document.getElementById("alcatelv2").style.borderRadius="3px";
-        document.getElementById("huaweiv2").style.backgroundColor='white';
-        document.getElementById("huaweiv2").style.color='black';
-        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
-    }
-
-    function mostraIframe5(){
-        document.getElementById("frameHuaweiv2").style.display='block';
-        document.getElementById("frameAlcatelv2").style.display='none';
-        document.getElementById("huaweiv2").style.backgroundColor='#660099';
-        document.getElementById("huaweiv2").style.color='white';
-        document.getElementById("huaweiv2").style.borderRadius='3px';
-        document.getElementById("alcatelv2").style.color='black';
-        document.getElementById("alcatelv2").style.backgroundColor='white';
-        document.getElementsByClassName("material-symbols-outlined")[0].style.display='block';
-    }
+}
