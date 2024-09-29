@@ -1,0 +1,8 @@
+Para buscar alarme de cliente vivo 2 através do putty,
+é necessário primeiramente desassociar o gpon da porta, e com
+o gpon desassociado prosseguir para acessar o putty.
+ 
+Ao abrir o putty, tem por padrão configurado o ip 200.204.1.4,
+que é o ip utilizado para o checklist e alarme de vivo 1, o ip para vivo 2 é 10.200.1.29.
+ 
+Ao confirmar o Ip que está configurado, selecionamos "Open" 

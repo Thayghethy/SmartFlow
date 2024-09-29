@@ -1,0 +1,2 @@
+Digitar "yes" e clicar em enter
+Colocar a senha de rede e clicar novamente no enter 
