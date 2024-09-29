@@ -1,3 +1,0 @@
-Ao abrir o putty, tem por padrão configurado o ip 200.204.1.4,
- que é o ip utilizado para o checklist e alarme de vivo 1.
-Ao confirmar o Ip que está configurado, selecionamos "Open"

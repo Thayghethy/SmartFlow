@@ -1,3 +1,0 @@
-Ao clicar em enter, será solicitado o Token pelo duo da matricula,
-e a tela do putty vai mudar após o Token aceito, assim sera solicitado a senha de rede, que pode ser usada digitando, ou copiando a senha e clicando com o botão direito no putty, em ambos os casos, a senha não ficará visível. 
-Após inserir a senha clicar enter.

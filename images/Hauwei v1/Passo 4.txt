@@ -1,4 +1,0 @@
-Assim, o putty já estará pronto para buscar o alarme.
-Para buscarmos o alarme de vivo 1, é necessário a olt,
-que conseguimos no SDU na aba "Informações Rede Interna" ou no
-DM, na aba "Dados da Olt"

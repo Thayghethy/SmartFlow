@@ -1,6 +1,0 @@
-Isso significa que foi possivel logar corretamente, e em sequência,
- é só colocar os comandos para buscar alarme da Huawei:
- "enable" Enter
- "config" Enter
- "scroll 512" Enter
- "display ont autofind all" Enter 2x

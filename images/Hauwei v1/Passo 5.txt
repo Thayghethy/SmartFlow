@@ -1,2 +1,0 @@
-Com a olt, colocamos no Putty o comando "ssh (olt)".
-Exemplo:
