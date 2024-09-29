@@ -1,2 +1,0 @@
-Para buscarmos o alarme de vivo 2, é necessário o Ip do Armário, que conseguimos no SDU na aba "Informações Rede Interna" ou 
-no Wise, na aba "Informações TBS"

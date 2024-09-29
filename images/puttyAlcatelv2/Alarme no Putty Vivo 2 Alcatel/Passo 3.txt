@@ -1,1 +1,0 @@
-Nesta etapa o putty já esta pronto para buscar o alarme.

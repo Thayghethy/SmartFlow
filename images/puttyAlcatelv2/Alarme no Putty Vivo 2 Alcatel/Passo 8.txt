@@ -1,9 +1,0 @@
-Após clicar em Enter, será aberto uma planilha, que contém todos os gpons que estão alarmando dentro 
-do Rin que está sendo procurado. é possível identifica o GPON procurando na coluna "SERNUM" e localizar o GPON. 
-Para identificar o alarme de um GPON especifico, primeiro deve-se localiza-lo entre os demais que apareceram. Ao localizar o GPON, é possível identificar
-o Slot e Porta em que se encontra, olhando na coluna "GPON-INDEX", em que os dois últimos são respectivamente Slot/Porta.
- 
-Vale lembrar que todo alarme Alcatel vivo 2, precisa ser somado +4 no slot para identificar a posição.
- 
- 
-Para deslogar do armário só digitar "logout" e pressionar enter.

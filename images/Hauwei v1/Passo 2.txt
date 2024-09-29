@@ -1,0 +1,2 @@
+Em seguida, será aberto a dela do putty, solicitando a matricula.
+Ao preencher a matricula, utilizando a letra “a” e o 0 junto do número do RE, exemplo: "a0163042"

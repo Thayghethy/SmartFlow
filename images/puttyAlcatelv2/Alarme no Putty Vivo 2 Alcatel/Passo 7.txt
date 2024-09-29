@@ -1,2 +1,0 @@
-Após é necessário inserir o seguinte 
-comando "show pon unprovision-onu" e pressionar enter 

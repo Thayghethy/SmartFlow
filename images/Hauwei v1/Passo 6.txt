@@ -1,0 +1,1 @@
+Ao apertar enter, será solicitado a senha de rede, e após clicar em enter, ele apresentará essa tela:

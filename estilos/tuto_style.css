@@ -27,3 +27,16 @@ img:hover {
     transition: .5s ease-in-out;
     box-shadow: 2px 2px 2px #660099;
 }
+
+.yellow {
+    background-color: yellow;
+}
+
+.pink {
+    background-color: #eb03eb;
+    color: white;
+}
+
+.red {
+    background-color: red;
+}

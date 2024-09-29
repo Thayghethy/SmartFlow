@@ -1,0 +1,7 @@
+Após concluir busca do GPON, na OLT em questão, é necessário deslogar
+da mesma. Para deslogar de uma OLT HUAWEI após a busca de alarme,
+é necessário inserir o comando:
+
+"quit" enter 
+ "quit" enter
+  "y" 

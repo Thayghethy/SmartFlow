@@ -1,4 +1,0 @@
-Com o ip do armário, colocamos no Putty o 
-comando "ssh (Ip do armário)" e pressionar enter.
-
-Exemplo:
