@@ -45,6 +45,8 @@ function toggleOptions(option) {
 function showIframe(frameId) {
     resetIframes();
     document.getElementById(frameId).style.display = 'block';
+    document.getElementById('cards').style.display = 'flex';
+    document.getElementById('cardTitulo').style.display = 'block';
     document.getElementById('toggleFullScreen').style.display = 'inline-block';
 }
 
@@ -52,6 +54,8 @@ function showIframe(frameId) {
 function resetIframes() {
     const iframes = document.querySelectorAll('iframe');
     iframes.forEach(iframe => iframe.style.display = 'none');
+    document.getElementById('cards').style.display = 'none';
+    document.getElementById('cardTitulo').style.display = 'none';
     document.getElementById('toggleFullScreen').style.display = 'none';
 }
 
@@ -63,9 +67,13 @@ function toggleFullScreen() {
     if (iframe) {
         iframe.classList.toggle('fullscreen');
         if (iframe.classList.contains('fullscreen')) {
+            document.getElementById('cards').style.display = 'none';
+            document.getElementById('cardTitulo').style.display = 'none';
             region.style.display = 'none'; // esconde menu quando em tela cheia
         } else {
             region.style.display = 'block'; // mostra menu saindo da tela cheia
+            document.getElementById('cards').style.display = 'flex';
+            document.getElementById('cardTitulo').style.display = 'block';
         }
     }
 }

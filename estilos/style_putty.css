@@ -74,3 +74,80 @@ iframe {
 .ont {
     display: none;
 }
+
+/*Estilos para os cards*/
+#cardTitulo{
+    text-align: center !important;
+    color: white;
+    font-size: 2em;
+    display: none;
+}
+
+
+#cards {
+    text-align: center;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+#cards div {
+    margin: 10px 20px 30px 20px;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+}
+
+#cards div img {
+    border-radius: 2px;
+    width: 95%;
+    height: 90%;
+    object-fit: cover;
+}
+
+#card1 {
+    background-color: white;
+    border-radius: 6px;
+    font-size: 1.3em;
+}
+
+#card2 {
+    background-color: white;
+    border-radius: 6px;
+    font-size: 1.3em;
+}
+
+#card3 {
+    background-color: white;
+    border-radius: 6px;
+    font-size: 1.3em;
+}
+
+#card1:hover {
+    width: 220px;
+    height: 320px;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#card2:hover {
+    width: 220px;
+    height: 320px;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#card3:hover {
+    width: 220px;
+    height: 320px;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+
