@@ -30,6 +30,12 @@ document.getElementById('searchBox').addEventListener('input', function() {
 
 //SCRIPT DA PÁGINA DO PUTTY
 
+//Botão Home
+
+function home(){
+    window.location.href = "index.html";
+}
+
 // Mostra opções relevantes para Vivo 1 ou Vivo 2
 function toggleOptions(option) {
     const ontVivo1 = document.getElementById('ont-vivo1');
