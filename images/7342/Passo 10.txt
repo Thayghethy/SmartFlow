@@ -1,3 +1,0 @@
-Nessa tela se localiza o gpom ao lado 
-de "SERNUM", o slot e a porta do lado 
-de "PON" (os dois últimos números são respectivamente slot/Porta) e o slid logo ao lado.

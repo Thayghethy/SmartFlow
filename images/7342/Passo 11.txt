@@ -1,2 +1,0 @@
-Para desconectar da OLT, é usado o comando "logoff", que apresenta em sequência
-uma confirmação, em que é enviado "Y" para deslogar e "N" para continuar logado.
