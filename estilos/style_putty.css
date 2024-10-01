@@ -14,12 +14,14 @@ body {
 #home {
     color:white;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 4em;
+    margin-top: 5px;
+    margin-left: 15px;
 }
 
 #home :hover {
     cursor: pointer;
-    font-size: 2.2em;
+    font-size: 4.2em;
     transition: .3s ease-in-out;
 }
 .region {
