@@ -11,6 +11,9 @@ body {
     background-color: #660099;
 }
 
+#home {
+    color:white;
+}
 .region {
     margin: 50px auto;
     padding: 50px;
