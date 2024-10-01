@@ -1,0 +1,1 @@
+Para realizar o login é necessário preencher o Username, que será sempre "operacao" para todos os operadores. Após clicar no enter é solicitado a senha de acesso que sempre é "oper@ultr@1" e apertar Enter.

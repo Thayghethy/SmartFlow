@@ -1,0 +1,1 @@
+Após o login realizado, digitar RTRV-ALM-PON::ALL:::,,,,,, e clicar no enter para enviar o comando, inserir "Y" e clicar novamente no Enter para confirmar o comando.

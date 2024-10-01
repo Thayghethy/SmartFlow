@@ -1,0 +1,1 @@
+Pouco após dar Enter no comando é mudado a tela para uma tela preta somente com o símbolo "<", nesse momento deverá apertar Enter e aguardar alguns segundos.

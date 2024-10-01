@@ -1,0 +1,1 @@
+Após o comando ser reconhecido, o putty já se encontra deslogado da olt e pronto para pesquisar outras caso necessário.

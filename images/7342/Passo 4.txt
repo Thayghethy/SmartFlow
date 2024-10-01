@@ -1,0 +1,1 @@
+Concluído o login do putty, vai aparecer uma linha com a matrícula no início, semelhante ao exemplo [a0163050@s-br-sp-spo-ctp-jmp-srv-01 ~]$;

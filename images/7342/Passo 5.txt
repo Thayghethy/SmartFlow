@@ -1,0 +1,2 @@
+Para realizar a busca de alarme de uma OLT 7342 é digitado a palavra "telnet" dado um espaço colado a OLT realizar mais um espaço e inserir o numeral 1023.
+Como no exemplo abaixo:
