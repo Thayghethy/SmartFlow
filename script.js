@@ -87,3 +87,7 @@ function toggleFullScreen() {
 function caboPrimariaHelper() {
     window.location.href = "convert_helper.html";
 }
+
+function alarmePutty() {
+    window.location.href = "putty.html";
+}
