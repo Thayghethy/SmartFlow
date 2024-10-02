@@ -71,10 +71,11 @@ h3, p, strong, a, img {
 }
 /*Estilos para os cards*/
 #cardTitulo{
-    text-align: center !important;
+    text-align: center;
+    background-color: #660099;
     color: white;
     font-size: 2em;
-    display: none;
+    display: block;
 }
 
 
