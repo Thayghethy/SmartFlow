@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/tuto_style_geral.css">
+    <script src="script.js"></script>
+
+    <title>Converter Slot e Porta para SPlitter no TBS</title>
+
+</head>
+<body>
+    <body>
+        <span id="home" class="material-symbols-outlined" onclick="home()">
+      home
+    </span>
+    <div>
+
+
+
+        <h3>Converter Slot e Porta para SPlitter no TBS</h3>
+        <p>Com as informações do alarme, SLOT, Porta, Rin e armário é possível realizar a conversão de Slot/Porta para identificar qual o Splitter que o HGU está alarmando. Para isso será necessário realizar o acesso pelo TBS, e então selecionar a opção <strong class="red">"Engineering".</strong></p> <br>
+
+
+        <img src="images/tbs/img1.png">
+
+        <p>Após clicar na ferramenta Engineering, é aberto uma nova linha abaixo, em que deve-se clicar na opção <strong class="yellow">Circ Des</strong>.</p> <br>
+
+
+        <img src="images/tbs/img2.png">
+     
+        <p>Em seguida aparecerá abaixo das ferramentas, uma janela com nome de "Circuit Design Query", dentro dela o campo <strong class="red">"Include"</strong>. Nesse campo, todos os quadradinhos devem estar marcados, se necessário, clicar nas opções para flegar.</p> <br>
+    
+        <img src="images/tbs/img3.png">
+
+        <p>Na sequência, clicar em <strong class="green">Set Select</strong>. Será aberto uma janela pop up, onde deve-se colar o Designador de acesso(designador-069) e então Apertar a tecla Enter 2 vezes.</p> <br>
+
+        <img src="images/tbs/img4.png">
+
+        <p>Após carregar, no TBS aparecerá o Desginador/Circuito numa linha em azul, sendo necessário dar dois cliques sobre a linha.</p> <br>
+
+        <img src="images/tbs/img5.png">
+
+        <p>Após clicar, o TBS abrirá o cadastro do cliente e subirá um Pop Up, que deve ser respondido como "Não". Após responder o Pop Up, deverá ser selecionado a aba <strong>"Design Lines"</strong> no cadastro do TBS</p>
+
+        <img src="images/tbs/img6.png"> <br>
+
+        <p>Na aba Design Lines, haverá uma tabela mostrando a posição atual do cliente no TBS.</p> <br>
+
+        <img src="images/tbs/img7.png"> 
+
+        <p>Exemplo: M05-SP331</p>
+
+        <p><br>Clicando duas vezes em qualquer informação dentro dessa tabela azul, mostrará uma janela de "Equipment Install for Circuit Design". Ela abrirá com uma linha azul em destaque, que é a posicação atual.</p>
+
+        <img src="images/tbs/img8.png">
+
+        <p> Acima da linha azul, aparece um número "0213 <strong>09 05</strong>", os quatro últimos digítos desse número, são respectivamente o <br>Slot e Porta. em que o cadastro se encontra.<br> No exemplo, o cliente se encontra no <strong>Slot 09</strong> <strong>Porta 05</strong>, que corresponde ao <strong>SP(Splitter) 331</strong>. <br> <br>
+        Acima da linha em destaque, há dois quadradinhos com <br>o Símbolo de Menos<strong>[-]</strong>, se clicar neles será possível<br> vizualizar todos os Slots dentro desse Rin, para assim localizar a posição do alarme e converter para SP.</p>
+
+        <img src="images/tbs/img9.png"> 
+
+        <p>Após isso, será vísivel além da linha em azul, outras linhas que possuem o mesmo númeo 0213 como prefixo, mas mudam os dois últimos números, que são o Slot, a linha em destaque, tem o final <strong>09</strong>, ou seja, Slot 09. Se a posição de alarme for por exemplo. Slot <strong>06</strong> Porta <strong>03</strong>, deverá ser localizado a linha com o número de final <strong>06</strong>, abrir o Slot apertando no quadradinho <strong>[+]</strong>. Em sequência, após o final 06, aparecerá várias linhas com finais diferentes, que serão referentes a porta, então será necessário localizar o final <strong>0603</strong>, Slot <strong>06</strong> / Porta <strong>03</strong>. 
+        </p>
+    
+        <img src="images/tbs/img10.png">
+
+        <p>Portanto, convertido o Slot 06 Porta 03, para o <strong>SPlitter 221</strong>. Com o SP, é possível seguir realizando manobra.</p>
+
+    </div>
+    <h3 id="cardTitulo">Cards relacionados com sua busca:</h3>
+    <section id="cards">
+        
+        <div id="card1" onclick="alarmePutty()">
+            <img src="images/Alcatel v1/Imagem 1.jpg" alt="Putty" >
+            <h5>Como verificar alarme via Putty</h5>
+        </div>
+        <div id="card2">
+            <img src="images/cards/Como converter cabo e primaria - sigres.jpg" alt="CaboPrimariaSigres">
+            <h5>Como converter Slot e Porta para Cabo e Primária via  Sigres</h5>
+        </div>
+        <div id="card2" onclick="caboPrimariaHelper()" >
+            <img src="images/conversao_helper/1.png" alt="Helper">
+            <h5>Como converter Slot e Porta para Cabo e Primária via Helper</h5>
+        </div>
+    </section>
+</body>
+</html>
