@@ -7,6 +7,11 @@ body {
     height: 100vh;
     margin: 0;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 .container {
     text-align: center;
@@ -73,4 +78,22 @@ a {
 a:hover {
     color:#660099;
     margin-left: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #660099;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer > a {
+    color: white;
+    text-decoration: none;
+}
+
+footer >a:hover {
+    color: #ffccff;
 }
