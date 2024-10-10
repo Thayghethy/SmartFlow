@@ -7,7 +7,7 @@ const articles = [
     { title: "Para converter Slot e porta em SPlitter via TBS", content: "Para converter Slot e porta em SPlitter via TBS, siga os seguintes passos.", link: "convert_tbs.html"},
     { title: "Como realizar manobra de Vivo 1 via CPQD", content: "Para realizar manobra de Vivo 1 via CPQD, siga esse passo a passo.", link: "manobra_v1.html"},
     { title: "Como realizar mudança de RIN e Armário no TBS", content: "Para realizar a troca de RIN ou armário no TBS, siga esse passo a passo.", link: "convert_rin.html"},
-    { title: "Básico - Web Radius", content: "Tutorial básico Web Radius", link:"tuto_webradius.html" }
+    /*{ title: "Básico - Web Radius", content: "Tutorial básico Web Radius", link:"tuto_webradius.html" },*/
 ];
 
 document.getElementById('searchBox').addEventListener('input', function() {
