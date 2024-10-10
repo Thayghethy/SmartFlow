@@ -3,7 +3,7 @@ const articles = [
     { title: "Como verificar alarme via putty", content: "Aqui estão os passos para verificar um alarme via putty.", link:"putty.html" },
     { title: "Como converter Slot e porta em Cabo e Primária via Helper", content: "Para converter Slot e porta em Cabo e Primária via Helper, siga os seguintes passos.", link:"convert_helper.html" },
     { title: "Como converter Slot e porta em Cabo e Primária via Sigres", content: "Para converter Slot e porta em Cabo e Primária via Sigres", link:"convert_sigres.html" },
-    { title: "Sem sincronismo", content: "Para sem sincronismo, utilize esse guia", link: "sem-sincro.html", keywords: ["luz piscando lentamente", "HGU", "piscando", "sem conexão"] },
+    /*{ title: "Sem sincronismo", content: "Para sem sincronismo, utilize esse guia", link: "sem-sincro.html", keywords: ["luz piscando lentamente", "HGU", "piscando", "sem conexão"] },*/
     { title: "Para converter Slot e porta em SPlitter via TBS", content: "Para converter Slot e porta em SPlitter via TBS, siga os seguintes passos.", link: "convert_tbs.html"},
     { title: "Como realizar manobra de Vivo 1 via CPQD", content: "Para realizar manobra de Vivo 1 via CPQD, siga esse passo a passo.", link: "manobra_v1.html"},
     { title: "Como realizar mudança de RIN e Armário no TBS", content: "Para realizar a troca de RIN ou armário no TBS, siga esse passo a passo.", link: "convert_rin.html"},
