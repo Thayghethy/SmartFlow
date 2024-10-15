@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/tuto_style.css">
+    <title>Huawei Vivo 2:: Putty</title>
+</head>
+<body>
+    <h3>Como puxar alarme via putty de Huawei Vivo 2:</h3>
+    <p>Para buscar alarme de cliente vivo 2 através do putty,
+        é necessário primeiramente desassociar o gpon da porta, e com
+        o gpon desassociado prosseguir para acessar o putty. 
+        Ao abrir o putty, tem por padrão configurado o ip 200.204.1.4,
+        que é o ip utilizado para o checklist e alarme de vivo 1, mas pode
+        ser usado para consultar o alarme de clientes vivo 2 também.
+        Ao confirmar o Ip que está configurado, selecionamos "Open".
+        </p>
+    <img class="imgLeft" src="images/puttyHuaweiv2/Imagem 1.jpg" alt="huawei1">  
+        <p> Em seguida, será aberto a dela do putty, solicitando a matricula.
+            Ao preencher a matricula, utilizando a letra "a" e o 0 junto do numero
+            do RE, exemplo: "a0163037"</p>
+    <img class="imgRight" src="images/puttyHuaweiv2/Imagem 2.jpg" alt="huawei2">
+    <p class="pleft">Ao clicar em enter, a tela do putty mudará, solicitando a senha de rede, que pode ser usada digitando, ou copiando a senha e clicando com o botão direito no putty, em ambos os casos, a senha não ficará visível.
+        Ao dar enter, deverá apresenta uma tela como essa:</p>
+    <img class="imgLeft" src="images/puttyHuaweiv2/Imagem 3.jpg" alt="huawei3">
+    <p class="pright">Assim, o putty já estará pronto para buscar o alarme.
+        Para buscarmos o alarme de vivo 2, é necessário o Ip do Armário, que conseguimos no SDU na aba "Informações Rede Interna" ou no Wise, na aba "Informações TBS"
+        Com o ip do armário, colocamos no Putty o comando "ssh (Ip do armário)".
+        Exemplo:</p>
+    <img class="imgRight" src="images/puttyHuaweiv2/Imagem 4 (2).jpg" alt="huawei4">
+    <p></p>
+    <img class="imgLeft" src="images/puttyHuaweiv2/Imagem 4.jpg" alt="huawei42">
+    <p class="pleft">Ao apertar enter, será solicitado a senha de rede, e após logar,
+        ele apresentará essa tela:</p>
+    <img class="imgRight" src="images/puttyHuaweiv2/Imagem 5.jpg" alt="huawei5">
+    <p class="pright">Caso surja no prompt a pergunta "Are you sure you want to continue connecting (yes/no/[fingerprint])?" basta digitar <strong>"yes"</strong>.</p>
+    <img class="imgLeft" src="images/puttyHuaweiv2/Imagem 6.jpg" alt="huawei6">
+    <p class="pleft">Isso significa que foi possivel logar corretamente, e em sequência,
+        é só colocar os comandos para buscar alarme da Huawei sem as aspas: <br>
+        <strong>"enable"</strong> Enter <br>
+        <strong>"config"</strong> Enter <br>
+        <strong>"scroll 512"</strong> Enter <br>
+        <strong>"display ont autofind all"</strong> Enter 2x</p>
+    <img class="imgRight" src="images/puttyHuaweiv2/Imagem 7.jpg" alt="huawei7">
+    <p class="pleft">Após dar o último Enter, será aberto nas linhas abaixo, será aberto
+        uma planilha, que contém todos os gpons que estão alarmando dentro do Rin que está sendo procurado.
+        Em cada quadrado é possível identificar o <strong>GPON</strong> procurando na linha <strong class="blue">"ONT SN"</strong> e localizar o <strong class="blue">GPON que está entre parênteses</strong>. Para identificar o alarme de um GPON especifíco, primeiro deve-se localiza-lo entre os demais que apareceram. Ao localizar o GPON, é possível identificar o <strong>Slot e Porta</strong> em que se encontra, olhando na linha <strong class="red">F/S/P</strong>, em que os <strong class="red">dois últimos são respectivamente Slot/Porta</strong>.</p>
+    <img class="imgLeft" src="images/puttyHuaweiv2/Imagem 8.jpg" alt="huawei8">
+    <p class="pleft">Por exemplo: 16/3
+        O número 16 é o numero do Slot, o 3 precisá ser somado do numero +1, para localizar o numero da porta, portanto a porta é 4(3+1).
+        Toda alarme Huawei vivo 2, precisa ser somado do +1 na porta para identificar a posição.
+        Abaixo dos alarmes, é possível identificar o Armário e Rin que está alarmando
+         Exemplo: armário M13 e Rin 417_418_419_422_423_430. <br> <br>
+
+         Após localizar o SLOT e a PORTA, você deve converter os mesmos para SPLITTER (ou SP), pois é essa informação que você deve passar para o técnico. <strong>LEMBRE-SE QUE NÃO SE DEVE PASSAR SLOT E PORTA PARA O TÉCNICO EM HIPÓTESE ALGUMA</strong>. Para saber como realizar a conversão, clique <a href="">AQUI</a> para o tutorial de conversão.
+        </p>
+</body>
+</html>

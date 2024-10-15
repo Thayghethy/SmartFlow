@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>SmartFlow</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <script>
+        window.alert("Este sistema ainda está em fase de desenvolvimento, logo não apresenta a qualidade final! Favor, relatar qualquer bug encontrado.")
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="SmartFlow Logo" id="logo">
+        <input type="text" id="searchBox" placeholder="Digite sua dúvida...">
+        <div id="results"></div>
+    </div>
+    <section id="cards">
+        <div id="cardJornal" onclick="jornal()">
+            <img src="images/cards/jornal_co.jpg" alt="JornalCo">
+            <h5>JORNAL DO CENTRO DE OPERAÇÕES</h5>
+        </div>
+
+        <div id="cardVideos" onclick="videos()">
+            <img src="images/logo_smartube.jpeg" alt="SmartTube">
+
+        <div id="cardVideos">
+            <img src="images/cards/supercast.jpg" alt="Supercast">
+            <h5>COMBINADO DE VÍDEOS DO CO</h5>
+        </div>
+        <div id="cardDicas" onclick="videos()">
+            <img src="images/cards/dicas.jpg" alt="Dicas">
+            <h5>APANHADO DE DICAS</h5>
+        </div>
+    </section>
+    <footer><a href="versao.html">Versão 0.0.2</a></footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/tuto_style.css">
+    <title>Alcatel 7342 Vivo 1:: Putty</title>
+</head>
+<body>
+  <h3>Como puxar alarme via putty de Alcatel 7342:</h3>
+  <p>Ao abrir o putty, tem por padrão configurado o ip <strong>200.204.1.4</strong>,
+    que é o ip utilizado para o checklist e alarme de vivo 1.
+    Ao confirmar o Ip que está configurado, selecionamos "Open"</p>
+  <img src="images/7342/Imagem 1.jpg" alt="73421">
+  <p>Em seguida, será aberto a dela do putty, solicitando a matricula.
+    Ao preencher a matricula, utilizando a letra “a” e o 0 junto do número do RE, exemplo: "a0163050"</p>
+  <img src="images/7342/Imagem 2.jpg" alt="73422">
+  <p>Em sequência apertar enter, aceitar o token do duo (no celular), digitar a sua senha de rede e apertar enter</p>
+  <img src="images/7342/Imagem 3.jpg" alt="73423">
+  <p>Concluído o login do putty, vai aparecer uma linha com a matrícula no início, semelhante ao exemplo [a0163050@s-br-sp-spo-ctp-jmp-srv-01 ~]$;</p>
+  <img src="images/7342/Imagem 4.jpg" alt="73424">
+  <p>Para realizar a busca de alarme de uma OLT 7342 é digitado a palavra <strong>"telnet"</strong>, um espaço colando o nome da OLT, realizar mais um espaço e inserir o numeral <strong>1023</strong>.
+    Como no exemplo abaixo:</p>
+  <img src="images/7342/Imagem 5.jpg" alt="73425">
+  <p>Pouco após dar Enter no comando é mudado a tela para uma tela preta somente com o símbolo "<", nesse momento deverá apertar Enter e aguardar alguns segundos.</p>
+  <img src="images/7342/Imagem 6.jpg" alt="73426">
+  <p>Quando chegar nesta tela inserir a letra <strong>"T"</strong> clicar no Enter para ser direcionado para a tela de login</p>
+  <img src="images/7342/Imagem 7.jpg" alt="73427">
+  <p>Para realizar o login é necessário preencher o Username, que será sempre <strong>"operacao"</strong> para todos os operadores. Após clicar no enter é solicitado a senha de acesso que sempre é <strong>"oper@ultr@1"</strong> e apertar Enter.</p>
+  <img src="images/7342/Imagem 8.jpg" alt="73428">
+  <p>Após o login realizado, digitar <strong>RTRV-ALM-PON::ALL:::,,,,,,</strong> e apertar enter para enviar o comando, inserir <strong>"Y"</strong> e apertar novamente no Enter para confirmar o comando.</p>
+  <img src="images/7342/Imagem 9.jpg" alt="73429">
+  <p>Nessa tela se localiza o GPON ao lado 
+    de <strong class="red">"SERNUM"</strong>, o slot e a porta do lado 
+    de <strong class="green">"PON"</strong>(os dois últimos números são respectivamente slot/Porta) e o <strong class="blue">SLID</strong> logo ao lado.</p>
+  <img src="images/7342/Imagem 10.jpg" alt="734210">]
+  <p>Para desconectar da OLT, é usado o comando <strong>"logoff"</strong>, que apresenta em sequência
+    uma confirmação, em que é enviado <strong>"Y"</strong> para deslogar e <strong>"N"</strong> para continuar logado.</p>
+  <img src="images/7342/Imagem 11.jpg" alt="734211">
+  <p>Após o comando ser reconhecido, o putty já se encontra deslogado da olt e pronto para pesquisar outras caso necessário.</p>
+  <img src="images/7342/Imagem 12.jpg" alt="734212">
+  <p>Após localizar o SLOT e a PORTA, você deve converter os mesmos para <strong>CABO E PRIMÁRIA</strong>, pois é essa informação que você deve passar para o técnico. <strong>LEMBRE-SE QUE NÃO SE DEVE PASSAR SLOT E PORTA PARA O TÉCNICO EM HIPÓTESE ALGUMA</strong>. Para saber como realizar a conversão, clique <a href="">AQUI</a> para o tutorial de conversão.</p>
+</body>
+</html>

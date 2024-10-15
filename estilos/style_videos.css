@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Cabeçalho fixo */
+header {
+    background-color: #660099;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.search-bar input {
+    padding: 7px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 7px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    margin-top: 60px;
+    display: flex;
+    padding: 20px;
+}
+
+/* Player de vídeo */
+.video-player {
+    flex: 2;
+    margin-right: 20px;
+    background-color: black; /* Fundo preto para as bordas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Altura fixa para o contêiner do vídeo */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta o vídeo mantendo a proporção */
+    border-radius: 10px;
+    background-color: black;
+}
+
+/* Sugestões de vídeo */
+.video-suggestions {
+    flex: 1;
+}
+
+.video-suggestions h3 {
+    margin-bottom: 10px;
+}
+
+.video-suggestions ul {
+    list-style-type: none;
+}
+
+.video-suggestions li {
+    margin-bottom: 10px;
+}
+
+.video-suggestions a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.video-suggestions img {
+    width: 180px;
+    height: 120px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.video-suggestions p {
+    font-size: 1em;
+    line-height: 1.2;
+}

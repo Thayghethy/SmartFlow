@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinado de vídeos do CO</title>
+    <link rel="stylesheet" href="estilos/style_videos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Combinado de vídeos do CO</h1>
+        </div>
+        <div class="search-bar">
+            <input id="search-input" type="text" placeholder="Pesquisar vídeos...">
+            <button onclick="searchVideo()">Buscar</button>
+        </div>
+    </header>
+    
+    <main>
+        <div class="video-player">
+            <video id="main-video" controls width="600">
+                <source id="main-video-source" src="videos/promotores_vivo.mp4" type="video/mp4">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+        </div>
+
+        <aside class="video-suggestions">
+            <h3>Vídeos sugeridos</h3>
+            <ul>
+                <li>
+                    <a href="videos/promotores_vivo.mp4" onclick="playVideo(event, 'videos/promotores_vivo.mp4')" data-keywords="promotores, vivo">
+                        <img src="videos/thumbnails/promotores.png" alt="Miniatura do vídeo 1" width="150">
+                        <p>Promotores da Vivo</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="videos/meu-video2.mp4" onclick="playVideo(event, 'videos/meu-video2.mp4')" data-keywords="tutorial javascript">
+                        <img src="videos/thumbnails/thumbnail2.jpg" alt="Miniatura do vídeo 2" width="150">
+                        <p>Título do vídeo 2 - Tutorial JavaScript</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="videos/meu-video3.mp4" onclick="playVideo(event, 'videos/meu-video3.mp4')" data-keywords="html css básico">
+                        <img src="videos/thumbnails/thumbnail3.jpg" alt="Miniatura do vídeo 3" width="150">
+                        <p>Título do vídeo 3 - HTML e CSS Básico</p>
+                    </a>
+                </li>
+                <!-- Adicionar mais vídeos conforme necessário -->
+            </ul>
+        </aside>
+    </main>
+
+    <script src="script_video.js"></script>
+</body>
+</html>

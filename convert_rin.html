@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/tuto_style_geral.css">
+    <script src="script.js"></script>
+    <title>Como Mudar Armário e Rin TBS</title>
+</head>
+<body>
+    <body>
+        <span id="home" class="material-symbols-outlined" onclick="home()">
+      home
+    </span>
+    <div>
+
+
+        <h3>Como Trocar de Armário no TBS</h3>
+
+        <p>Após abrir o cadastro do cliente no TBS, é possivel verificar na Aba Design Lines o Armário e o SPlitter, em que o cliente se encontra. Como no exemplo M43-SP45. O armário atual é o M43 e o SPlitter 45.</p> <br>
+       
+       <img src="images/rin_armario/img1.png"><br><br>
+
+
+
+       <p>Para converter o alarme para outro armário, como M05 por exemplo, será necessário abrir a aba <strong>Circuit Detail</strong>. No campo <strong>Z CLLI</strong> consta que o cadastro atual está no G1M43</p> <br>
+
+       <img src="images/rin_armario/img2.png"><br><br>
+
+
+
+       <p>E Para alterar o armário, é editado o final do texto, para o armário em que deseja converter, por exemplo apagar o <strong>G1M43</strong> e mudar para <strong>G1M05</strong>. </p> <br>
+
+       <img src="images/rin_armario/img3.png"><br><br>
+
+
+
+       <p>E em seguida clicar em <strong>"Save"</strong> nos ícones de ferramenta acima</p> <br>
+
+       <img src="images/rin_armario/img4.png"><br><br>
+
+
+
+       <h3>Como Alterar o Rin</h3><br>
+
+
+       <p>Após salvar deve-se fechar o cadastro no TBS e abrir novamente. Após reabrir o cadastro, ir na Aba <strong>Design Lines</strong> Clicar com o botão direito sobre o cadastro e selecionar a opção <strong>"Equipment"</strong> </p> <br>
+
+
+       <img src="images/rin_armario/img5.png"><br><br>
+
+
+
+       <p>Após abrir a aba de Equipment, clicar com o botão direito novamente, e selecionar <strong>"Search"</strong> e preencher os campos <strong>Type</strong> como <strong>RDT</strong> e o <strong>Equipment Must Have</strong> como <strong>(None)</strong> e na sequência, apertar o botão <strong>Retrieve</strong>. </p> <br>
+
+       <img src="images/rin_armario/img6.png"><br><br>
+
+
+
+       <p>Após isso aparecerá os Rins que estão disponíveis no Armário desejado. Consultando o Campo <strong>Name</strong>, será possível verificar qual o Rin que deseja abrir para converter alarme. No exemplo possuí o <strong>Rin 162</strong> e <strong>Rin 581</strong>.</p> <br>
+
+       <img src="images/rin_armario/img7.png"><br><br>
+
+
+
+
+       <p>Após isso será possível abrir o Rin desejado clicando duas vezes com o botão direito na linha do Rin. Por exemplo, abrindo o <strong>Rin 581</strong> </p> <br>
+
+       <img src="images/rin_armario/img8.png"><br><br>
+
+
+
+       <p>Após abrir o Rin 518, dentro da janela de "Equipment Install", mostárá dois quadrados separados, na direita, será possível converter o Slot e Porta no Rin 581, normalmente para então localizar o Splitter em que está alarmando.</p> <br>
+
+
+
+    </div>
+    <h3 id="cardTitulo">Cards relacionados com sua busca:</h3>
+    <section id="cards">
+        
+        <div id="card1" onclick="alarmePutty()">
+            <img src="images/Alcatel v1/Imagem 1.jpg" alt="Putty" >
+            <h5>Como verificar alarme via Putty</h5>
+        </div>
+        <div id="card2">
+            <img src="images/cards/Como converter cabo e primaria - sigres.jpg" alt="CaboPrimariaSigres" onclick="sigres()">
+            <h5>Como converter Slot e Porta para Cabo e Primária via  Sigres</h5>
+
+
+        </div>
+        <div id="card3">
+            <img src="images/cards/Como converter sp no TBS.jpg" alt="SplitterTBS" onclick="tbs()">
+            <h5>Como converter Slot e Porta para Splitter (SP) via TBS</h5>
+        </div>
+    </section>
+</body>
+</html>

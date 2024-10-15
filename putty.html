@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Alarme via Putty</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/style_putty.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <span id="home" class="material-symbols-outlined" onclick="home()">
+  home
+</span>
+    <div class="region">
+        <h4>Qual região é o caso?</h4>
+        <button id="vivo1" onclick="toggleOptions(1)">Vivo 1</button>
+        <button id="vivo2" onclick="toggleOptions(2)">Vivo 2</button>
+        
+        <div class="ont" id="ont-vivo1">
+            <h4>Qual é o modelo de ONT?</h4>
+            <h6>Em caso de dúvida sobre como verificar qual é o modelo/gerência de ONT, clique <a href="ont.html">aqui</a></h6>
+            <button onclick="showIframe('frame7342v1')">Alcatel 7342</button>
+            <button onclick="showIframe('frameAlcatelv1')">Alcatel 7360/7302</button>
+            <button onclick="showIframe('frameHuaweiv1')">Huawei</button>
+        </div>
+        
+        <div class="ont" id="ont-vivo2">
+            <h4>Qual é o modelo de ONT?</h4>
+            <h6>Em caso de dúvida sobre como verificar qual é o modelo de ONT, clique <a href="ont.html">aqui</a></h6>
+            <button onclick="showIframe('frameAlcatelv2')">Alcatel</button>
+            <button onclick="showIframe('frameHuaweiv2')">Huawei</button>
+        </div>
+    </div>
+
+    <div class="iframe">
+        <span id="toggleFullScreen" class="material-symbols-outlined" onclick="toggleFullScreen()">
+            open_in_full
+        </span>
+        <iframe id="frame7342v1" src="7342v1.html" frameborder="1"></iframe>
+        <iframe id="frameAlcatelv1" src="alcatelv1.html" frameborder="1"></iframe>
+        <iframe id="frameHuaweiv1" src="huaweiv1.html" frameborder="1"></iframe>
+        <iframe id="frameAlcatelv2" src="alcatelv2.html" frameborder="1"></iframe>
+        <iframe id="frameHuaweiv2" src="huaweiv2.html" frameborder="1"></iframe>
+    </div>
+    <h3 id="cardTitulo">Cards relacionados com sua busca:</h3>
+    <section id="cards">
+        
+        <div id="card1" onclick="caboPrimariaHelper()">
+            <img src="images/cards/Como converter cabo e primaria - helper.jpg" alt="caboPrimaria">
+            <h5>Como converter Slot e Porta para Cabo e Primária via Helper</h5>
+        </div>
+        <div id="card2" onclick="sigres()">
+            <img src="images/cards/Como converter cabo e primaria - sigres.jpg" alt="CaboPrimariaSigres">
+            <h5>Como converter Slot e Porta para Cabo e Primária via  Sigres</h5>
+        </div>
+        <div id="card3">
+            <img src="images/cards/Como converter sp no TBS.jpg" alt="SplitterTBS" onclick="tbs()">
+            <h5>Como converter Slot e Porta para Splitter (SP) via TBS</h5>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    background-color: #660099;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0;
+}
+
+#home {
+   position: absolute;
+   top: 10px;
+   left: 5%;
+   color: white;
+   cursor: pointer;
+   font-size: 4em;
+   display: block;
+}
+
+#home :hover {
+    cursor: pointer;
+    font-size: 4.2em;
+    transition: .3s ease-in-out;
+}
+
+
+div {
+    background-color: white;
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 70vw;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+h3 {
+    font-size: 3em;
+    padding: 5px;
+}
+p {
+    padding: 2px;
+    font-size: 1.5em;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.425);
+}
+
+.red {
+    background-color: rgba(255, 0, 0, 0.432);
+}
+
+.yellow {
+    background-color: rgba(255, 255, 0, 0.384);
+}
+
+.green {
+    background-color: rgba(5, 184, 5, 0.5);
+}
+
+h3, p, strong, a, img {
+    background-color: white;
+}
+/*Estilos para os cards*/
+#cardTitulo{
+    text-align: center;
+    background-color: #660099;
+    color: white;
+    font-size: 2em;
+    display: block;
+}
+
+
+#cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#cards div {
+    margin: 10px 20px 30px 20px;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+}
+
+#cards div img {
+    border-radius: 2px;
+    width: 95%;
+    height: 90%;
+    object-fit: cover;
+}
+
+#card1 {
+    background-color: white;
+    border-radius: 6px;
+    font-size: 1.3em;
+}
+
+#card2 {
+    background-color: white;
+    border-radius: 6px;
+    font-size: 1.3em;
+}
+
+#card3 {
+    background-color: white;
+    border-radius: 6px;
+    font-size: 1.3em;
+}
+
+#card1:hover {
+    width: 220px;
+    height: 320px;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#card2:hover {
+    width: 220px;
+    height: 320px;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#card3:hover {
+    width: 220px;
+    height: 320px;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+h5 {
+    background-color: white;
+}
+
+li {
+    background-color: white;
+ }

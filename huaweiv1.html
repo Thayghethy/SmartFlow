@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/tuto_style.css">
+    <title>Huawei Vivo 1:: Putty</title>
+</head>
+<body>
+    <h3>Como puxar alarme via putty de Huawei Vivo 1:</h3>
+    <p>Ao abrir o putty, tem por padrão configurado o ip <strong>200.204.1.4</strong>,
+        que é o ip utilizado para o checklist e alarme de vivo 1.
+       Ao confirmar o Ip que está configurado, selecionamos "Open"</p>
+    <img src="images/Hauwei v1/Imagem 1 (2).jpg" alt="Huawei1v1">
+    <p>Em seguida, será aberto a dela do putty, solicitando a matricula.
+        Ao preencher a matricula, utilizando a letra “a” e o 0 junto do número do RE, exemplo: "a0163042"</p>
+    <img src="images/Hauwei v1/Imagem 1.jpg" alt="Huawei12V1">
+    <p>Ao clicar em enter, será solicitado o <strong>Token pelo duo</strong> da matricula (Celular),
+        e a tela do putty vai mudar após o Token aceito.  
+        Após inserir a senha clicar enter.</p>
+    <img src="images/Hauwei v1/Imagem 2.jpg" alt="Huawei2V1">
+    <p>Então sera solicitado a senha de rede, que pode ser usada digitando, ou copiando a senha e clicando com o botão direito no putty, em ambos os casos, a senha não ficará visível.</p>
+    <img src="images/Hauwei v1/Imagem 3.jpg" alt="Huawei3V1">
+    <p>Assim, o putty já estará pronto para buscar o alarme.
+        Para buscarmos o alarme de vivo 1, é necessário a olt,
+        que conseguimos no SDU na aba "Informações Rede Interna" ou no
+        DM, na aba "Dados da Olt"</p>
+    <img src="images/Hauwei v1/Imagem 4.jpg" alt="Huawei4V1">
+    <p>Com a olt, colocamos no Putty o comando "ssh (olt)" (para colar o nome da OLT basta dar um clique com o botão direito do mouse).<br>
+        Exemplo:</p>
+    <img src="images/Hauwei v1/Imagem 5.jpg" alt="Huawei5V1">
+    <p>Ao apertar enter, será solicitado a senha de rede. </p>
+    <img src="images/Hauwei v1/Imagem 6.jpg" alt="Huawei6V1">
+    <p>Após clicar em enter, ele apresentará essa tela, isso significa que foi possível logar corretamente, e em sequência, é só colocar os comandos para buscar alarme da Huawei:<br>
+        <strong>"enable"</strong> Enter <br>
+        <strong>"config"</strong> Enter <br>
+        <strong>"scroll 512"</strong> Enter <br>
+        <strong>"display ont autofind all"</strong> Enter 2x</p>
+    <img src="images/Hauwei v1/Imagem 7.jpg" alt="Huawei7V1">
+    <p></p>
+    <img src="images/Hauwei v1/Imagem 8.jpg" alt="Huawei8V1">
+    <p></p>
+    <img src="images/Hauwei v1/Imagem 10.jpg" alt="Huawei9V1">
+    <p>Após dar o último Enter, nas linhas abaixo, será aberto
+        uma planilha, que contém todos os gpons que estão alarmando dentro
+        da olt que está sendo procurado.
+        Em cada quadrado é possível identificar o GPON procurando na linha
+        "ONT SN" e localizar o <strong class="yellow">GPON</strong> que está entre parênteses. Para identificar
+        o alarme de um GPON especifíco, primeiro deve-se localiza-lo entre os
+        demais que apareceram. Ao localizar o GPON, é possível identificar
+        o Slot e Porta em que se encontra, olhando na linha F/S/P, em que
+        os dois últimos são respectivamente <strong class="pink">Slot/Porta</strong>. também é possivel 
+        validar o slid configurado no hgu na linha <strong class="red">“PASSWORD”</strong></p>
+    <img src="images/Hauwei v1/Imagem 11.jpg" alt="Huawei10V1">
+    <p>Após concluir busca do GPON, na OLT em questão, é necessário deslogar
+        da mesma. Para deslogar de uma OLT HUAWEI após a busca de alarme,
+        é necessário inserir o comando: <br>
+        
+        <strong>"quit"</strong> enter <br>
+         <strong>"quit"</strong> enter <br>
+          <strong>"y"</strong></p>
+    <img src="images/Hauwei v1/Imagem 12.jpg" alt="Huawei11V1">
+    <p> Após localizar o SLOT e a PORTA, você deve converter os mesmos para <strong>CABO E PRIMÁRIA</strong>, pois é essa informação que você deve passar para o técnico. <strong>LEMBRE-SE QUE NÃO SE DEVE PASSAR SLOT E PORTA PARA O TÉCNICO EM HIPÓTESE ALGUMA</strong>. Para saber como realizar a conversão, clique <a href="">AQUI</a> para o tutorial de conversão.</p>
+</body>
+</html>

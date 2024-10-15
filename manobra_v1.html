@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/tuto_style_geral.css">
+    <script src="script.js"></script>
+    <title>Converter Slot e Porta para SPlitter no TBS</title>
+
+</head>
+<body>
+    <body>
+        <span id="home" class="material-symbols-outlined" onclick="home()">
+      home
+    </span>
+    <div>
+
+
+
+        <h3>Manobra Vivo 1 Next CPQD</h3>
+        
+        <p>Para acessar o CPQD é necessário três informações iniciais que conseguimos na <br> página inicial do zeus do nosso cliente. Por exemplo:<br> Escritório(ES): JB <br>
+        AT: LV <br>
+        CNL: 11000 </p> <br>
+
+        <img src="images/manobrav1/img1.png"> <br> <br>
+
+        <p>Dentro do CPQD precisamos localizar o escritório do nosso cliente, com base nas informação que achamos no ZEUS EX:
+
+        Escritório : JB</p> <br>
+
+        <img src="images/manobrav1/img2.png"> <br> <br>
+
+        <p>Dentro do escritório do cliente é necessário preencher os dados de localidade e site, conforme o CNL e a AT encontradas no ZEUS e clicar em seguida na lupa ao lado. E em seguida abrir o escritório.
+        </p> <br>
+
+        <img src="images/manobrav1/img3.png"> <br> <br>
+
+        <p>O CPQD nos permite consultar em qual cabo e primária que o cliente está atualmente. Para cliente NEXT, consultar por designador de circuito usando o 069. E para clientes SIEBEL usando  Ordem de Reserva(PON) ou Numero de serviço(ID Fibra Sem o CNL)</p> <br>
+
+
+        <img src="images/manobrav1/img4.png"> <br> <br>  
+
+        <p>Ao pesquisar os dados da ordem do cliente, é aberto a aba em que <br> consta a posição atual do cliente. <br>
+         No exemplo, cliente está no 05-F#73, cabo 5 primária 73 <br> caso essa não seja a facilidade desejada, é necessário manobrar</p> <br>
+
+         <img src="images/manobrav1/img5.png"> <br> <br>
+
+         <h3>Consultando Fibra Disponível</h3> <br>
+
+         <p>Para realizarmos a manobra, é necessário primeiro encontrar uma fibra disponível para a manobrar. Na aba Consulta Recursos de Rede>Rede FTTx> Por Equip. Terminal, podemos realizar a consulta das fibras disponíveis.</p> <br>
+
+         <img src="images/manobrav1/img6.png"> <br> <br>   
+
+         <p>No campo cabo, devemos preencher com o facilidade desejada, seguindo o <br>formato cabo-F#primária por exemplo: 05-F#73 <br>   Após preencher a faciliade, necessário clicar na lupinha ao lado <br> para encontrar a lista de caixas.</p>
+
+         <img src="images/manobrav1/img7.png"> <br> <br>
+
+         <p>Ao aparecer a lista de caixa disponíveis, é necessário selecionar uma delas e clicar em Ok, para visualizar o intervalo de fibras da caixa após preencher</p> <br>
+
+         <img src="images/manobrav1/img8.png"> <br> <br> 
+
+         <p>Após selecionar qual caixa/SS  vamos pesquisar, devemos selecionar o tipo de equipamento terminal, ou seja, o tipo de caixa. Na maioria dos casos conseguimos achar como terminal de fibras as G0(caixas de rua) e Splittler as GP(caixas prediais). <br> <br>
+
+        Após identificarmos o tipo de  caixa pelo zeus, ou por tentativa e erro, clicamos nas lupas que aparecem abaixo e em seguida, em “consultar”</p> <br>
+
+        <img src="images/manobrav1/img9.png"> <br> <br>
+
+        <p>Ao consultar, aparecerá todas as fibras da caixa. Como por exemplo, a SS7 que possui intervalo de 49 a 56. Ao aparecer o pop up, necessário localizar alguma fibra com “ESTADO” em VG, e em seguida identificar qual a numeração da fibra pelo campo “Unidade Lógica” e anotar para a manobra. <br> ***Só é possível manobrar para o status de VG. Caso não aja nenhuma “vaga”, necessário voltar e verificar outra SS de mesmo cabo/primária***</p> <br>
+
+        <img src="images/manobrav1/img10.png"> <br> <br>
+
+        <h3>Realizando Manobra</h3> <br>
+
+        <p>Após localizar uma fibra vaga, deve-se seguir em Atualização de Recurso > Rede FTTX > Manobrar E então preencher com  com o Identificador de Circuito(069), Ordem de Reserva/Recursos (PON) ou então, com o N°  de Serviço (ID FIBRA - CNL) <br> Após isso, em filtrar para prosseguir com a manobra.</p> <br>
+
+        <img src="images/manobrav1/img11.png"> <br> <br>
+
+        <p>Após selecionar filtrar, aparecerá o cadastro do cliente na facilidade atual. Clicar em Manobrar para seguir para a nova facilidade Na próxima tela é necessário selecionar a aba “para” que será a futura posição.</p> <br>
+
+        <img src="images/manobrav1/img12.png"> <br> <br>
+
+        <p>Em seguida de selecionar a aba, Preencher A opção Cabo do Equip. com a facilidade desejada, ao clicar na lupa, aparecerá o pop up para selecionar as SS novamente, deve-se selecionar a que foi consultada anteriormente.
+        Selecionar novamente o tipo de equip. terminal, EX: splitter.
+        Em seguida nas opções ident. do equip. terminal e terminal Óptico, clicar na lupa que preencherá os campos automaticamente.</p> <br>
+
+        <img src="images/manobrav1/img13.png"> <br> <br>
+
+        <p>Após preencher todos os campos, igual o exemplo ao lado, identificar fibra/porta que foi encontrada com status de “VG”(vaga) anteriormente.
+        Após preencher todos os campos e colocar a fibra desejada. Clicar no canto inferior da pagina “EXECUTAR” e aguardar alguns segundos para a conclusão da manobra.</p> <br>
+
+        <img src="images/manobrav1/img14.png"> <br> <br>
+
+        <p>Aguardar a mensagem de conclusão da manobra. Caso ocorra alguma falha, acionar o COACH.</p>
+
+
+
+
+
+
+    </div>
+    <h3 id="cardTitulo">Cards relacionados com sua busca:</h3>
+    <section id="cards">
+        
+        <div id="card1" onclick="alarmePutty()">
+            <img src="images/Alcatel v1/Imagem 1.jpg" alt="Putty" >
+            <h5>Como verificar alarme via Putty</h5>
+        </div>
+        <div id="card2">
+            <img src="images/cards/Como converter cabo e primaria - sigres.jpg" alt="CaboPrimariaSigres">
+            <h5>Como converter Slot e Porta para Cabo e Primária via  Sigres</h5>
+        </div>
+        <div id="card3" onclick="webradius()">
+            <img src="images/webradius/imagem1.png" alt="WebRadius">
+            <h5>Guia básico do WebRadius</h5>
+        </div>
+    </section>
+</body>
+</html>

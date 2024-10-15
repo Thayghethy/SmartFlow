@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/tuto_style.css">
+    <title>Alcatel 7360/7302 Vivo 1:: Putty</title>
+</head>
+<body>
+    <h3>Como puxar alarme via putty de Alcatel Vivo 1:</h3>
+    <p>Ao abrir o putty, tem por padrão 
+        configurado o ip
+        <strong>200.204.1.4</strong>, que é o ip utilizado para o 
+        checklist e alarme de vivo 1. 
+        Ao confirmar o Ip que está 
+        configurado, selecionamos <strong>"Open"</strong></p>
+    <img src="images/Alcatel v1/Imagem 1.jpg" alt="Alactel1V1">
+    <p>Em seguida, será aberto a dela do putty, solicitando a matricula. Ao preencher a matricula, utilizando a letra “a” e o 0 junto do número do RE, exemplo: "a0163042"</p>
+    <img src="images/Alcatel v1/Imagem 2.jpg" alt="Alcatel2V1">
+    <p>Ao clicar em enter, será solicitado o
+        <strong>Token pelo duo</strong>
+        da matricula (Celular), e a tela do putty vai mudar após o Token aceito. Após inserir a senha clicar enter.</p>
+    <img src="images/Alcatel v1/Imagem 3.jpg" alt="Alcatel3V1">
+    <p>Então sera solicitado a <strong>senha de rede</strong>, que pode ser usada digitando, ou copiando a senha e clicando com o botão direito no putty, em ambos os casos, a senha não ficará visível.</p>
+    <img src="images/Alcatel v1/Imagem 4.jpg" alt="Alcatel4V1">
+    <p>Assim, o putty já estará pronto para buscar o alarme. Para buscarmos o alarme de vivo 1, é necessário a olt, que conseguimos no SDU na aba <strong>"Informações Rede Interna"</strong> ou no DM, na aba <strong>"Dados da Olt"</strong></p>
+    <img src="images/Alcatel v1/Imagem 5 (2).jpg" alt="Alcatel5V1">
+    <p></p>
+    <img src="images/Alcatel v1/Imagem 5.jpg" alt="Alcatel52V1">
+    <p>Com a olt, colocamos no Putty o comando <strong>"ssh (olt)"</strong> (para colar o nome da OLT basta dar um clique com o botão direito do mouse). <br>
+
+        Exemplo:</p>
+    <img src="images/Alcatel v1/Imagem 6.jpg" alt="Alcatel6V1">
+    <p>Ao apertar enter, será solicitado a <strong>senha de rede</strong>.</p>
+    <img src="images/Alcatel v1/Imagem 7.jpg" alt="Alcatel7V1">
+    <p>Após clicar em enter, ele apresentará a tela logo a baixo, isso significa que foi possível logar corretamente, e em sequência, é só colocar o comando: <strong>show pon unprovision-onu</strong></p>
+    <img src="images/Alcatel v1/Imagem 8.jpg" alt="Alcatel8V1">
+    <p>Após clicar em Enter, será aberto uma planilha, que contém todos os gpons que estão alarmando dentro da OLT que está sendo procurada. 
+        É possível identificar o GPON procurando na coluna <strong class="red">"SERNUM"</strong>. Ao localizar o GPON, é possível identificar o Slot e Porta em que se encontra, olhando na coluna <strong class="yellow">"GPON-INDEX"</strong>, em que os dois últimos são respectivamente Slot/Porta, também é possível identificar o slid na coluna <strong class="blue">SUBSCRIBER-LOCID</strong>.
+        Para deslogar da olt só digitar logout e apertar enter, após o comando ser reconhecido o putty vai estar pronto para nova busca em outras olts.</p>
+    <img src="images/Alcatel v1/Imagem 9.jpg" alt="Alcatel9V1">
+    <p>Após localizar o SLOT e a PORTA, você deve converter os mesmos para <strong>CABO E PRIMÁRIA</strong>, pois é essa informação que você deve passar para o técnico. <strong>LEMBRE-SE QUE NÃO SE DEVE PASSAR SLOT E PORTA PARA O TÉCNICO EM HIPÓTESE ALGUMA</strong>. Para saber como realizar a conversão, clique <a href="">AQUI</a> para o tutorial de conversão.</p>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Do Centro de Operações</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset básico */
+
+        @font-face {
+            font-family: "SmartFlow";
+            src: url(fontes/Montserrat-VariableFont_wght.ttf);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #660099;
+            color: #fff;
+        }
+
+        header h1 {
+            font-family: "SmartFlow";
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        article {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+        }
+
+        article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+            color: #660099;
+            margin: 20px;
+        }
+
+        article p {
+            font-size: 1rem;
+            padding: 0 20px 20px;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f1f1f1;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Estilo do modal (imagem em tela cheia) */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 999; 
+            padding-top: 60px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            article h2 {
+                font-size: 1.3rem;
+            }
+
+            article p {
+                font-size: 0.95rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jornal do Centro de Operações</h1>
+    </header>
+
+    <main>
+        <section class="articles">
+            <article>
+                <img src="images/jornal/gaus.jpg" alt="Imagem do artigo 1">
+                <h2>Já renovou seus acessos no GAUS?</h2>
+                <p>Resumo do artigo 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </article>
+            <article>
+                <img src="images/jornal/vivo_now.jpg" alt="Imagem do artigo 2">
+                <h2>Validação de chamados Vivo Now</h2>
+                <p>Fique ligado nas regras na imagem a cima para abertura de chamados no Vivo Now! </p>
+            </article>
+            <article>
+                <img src="images/jornal/manobra_reparo.jpg" alt="Imagem do artigo 3">
+                <h2>Novo procedimento para manobras em reparo</h2>
+                <p>Temos atualizações sobre o processo de Manobra, acompanhe os canais de comunicação para não perder nadinha!</p>
+            </article>
+            <article>
+                <img src="images/jornal/voluntariado.jpg" alt="Imagem do artigo 4">
+                <h2>Programa de Voluntariado</h2>
+                <p>E aí, já pensou em fazer parte do programa de Voluntariado da Fundação Telefônica Vivo? Já? Então corre lá na intranet e dá uma conferida em como ser membro do Comitê do voluntariado!</p>
+            </article>
+            <article>
+                <img src="images/jornal/chamados_aberto.jpg" alt="Imagem do artigo 5">
+                <h2>Confira os chamados em aberto</h2>
+                <p>Dá uma conferida nesses BUGs que estão em aberto em acompanhamento! E atenção, nenhum deles impactará na resolução do problema.</p>
+            </article>
+            <article>
+                <img src="images/jornal/outubro_rosa.jpg" alt="Imagem do artigo 6">
+                <h2>Outubro Rosa 2024</h2>
+                <p>Ficou sabendo? Dia 09/10 é o nosso Outubro Rosa! Vamos juntos apoiar essa causa? Seapara aquele look cor de rosa ou um acessório para registrar esse momento. Anota aí, será dia 09/10!</p>
+            </article>
+            <article>
+                <img src="images/jornal/Senhas.jpg" alt="Imagem do artigo 7">
+                <h2>Suas senhas estão seguras?</h2>
+                <p>Mantenha seus acessos protegidos e garanta a segurança de nossas informações. Confira tudo sobre compartilhamento de senha na intranet!</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Modal para exibir a imagem em tela cheia -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Jornal Do Centro de Operações.</p>
+    </footer>
+
+    <script>
+        // Seleciona o modal
+        var modal = document.getElementById("imageModal");
+
+        // Seleciona a imagem do modal
+        var modalImg = document.getElementById("fullImage");
+
+        // Seleciona todas as imagens dos artigos
+        var articleImages = document.querySelectorAll(".articles img");
+
+        // Para cada imagem, adiciona o evento de clique
+        articleImages.forEach(function(img) {
+            img.onclick = function() {
+                modal.style.display = "block";  // Exibe o modal
+                modalImg.src = this.src;  // Define o src da imagem clicada no modal
+            }
+        });
+
+        // Seleciona o botão de fechar o modal
+        var closeModal = document.getElementsByClassName("close")[0];
+
+        // Fecha o modal quando clicar no botão de fechar
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
