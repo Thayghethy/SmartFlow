@@ -117,8 +117,8 @@ function webradius() {
 }
 
 function videos() {
-    window.location.href = "videos.html"
-    /*window.alert("Desculpe, essa funcionalidade ainda está em desenvolvimento.")*/
+    /*window.location.href = "videos.html"*/
+    window.alert("Desculpe, essa funcionalidade ainda está em desenvolvimento.")
 }
 
 function jornal() {
