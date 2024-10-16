@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="estilos/tuto_style_geral.css">
     <script src="script.js"></script>
     <title>Sem sincronismo V1</title>
+    <style>
+        .noHover:hover {
+            width: 600px;
+        }
+    </style>
 </head>
 <body>
     <body>
@@ -17,24 +22,24 @@
         <h3>Guia básico - Sem sincronismo cliente vivo 1 NEXT</h3>
         <p>Primeiro passo é necessário validar se realmente se trata de um atendimento de sem sincronismo, pois é muito comum o técnico informar que está sem sincronismo más na verdade é sem autenticação. 
             Para validar se o cliente está realmente sem sincronismo é necessário observar na aba <strong class="red">"INFORMAÇÕES OLT"</strong> se o sincronismo está em <strong class="red">"DOWN"</strong>, como na imagem abaixo:</p>
-        <img src="images/sem_sincro_v1/imagem1.png" alt="sem_sincro_v1"width="500px"height="500px">
+        <img class="noHover" src="images/sem_sincro_v1/imagem1.png" alt="sem_sincro_v1"width="500px"height="500px">
         <p>Após vamos validar se a foto da caixa está de acordo com o sistema, tanto <strong class="yellow">cabo e primaria</strong> quanto <strong class="red">AT</strong> devem estar de acordo com o SDU (Caso a AT esteja divergente, é necessário que o técnico faça a instalação na AT designada, ou entre em contato com a regional, pois CO NÃO FAZ MANOBRA DE AT).</p>
-        <img src="images/sem_sincro_v1/imagem2.png" alt="sem_sincro_v1"width="250px"height="400px"> 
-        <img src="images/sem_sincro_v1/imagem3.png" alt="sem_sincro_v1"width="500px"height="400px">
+        <img class="noHover" src="images/sem_sincro_v1/imagem2.png" alt="sem_sincro_v1"width="250px"height="400px"><br>
+        <img class="noHover" src="images/sem_sincro_v1/imagem3.png" alt="sem_sincro_v1"width="500px"height="400px">
         <p> Agora validamos se o cliente tem vlan:
             <li>Clicar na aba BANDA LARGA</li> 
             <li>Depois em "informações de bridge"</li>
         <li>Caso o cliente não tenha vlan criada clicar em "criar bridge de dados"</li></p>
-        <img src="images/sem_sincro_v1/imagem4.png" alt="Convert_helper3"width="500px"height="300px">
+        <img class="noHover" src="images/sem_sincro_v1/imagem4.png" alt="Convert_helper3"width="500px"height="300px">
         <p>Não sendo possível criar vlan pelo sdu ou caso de vlan em DOWN realizar check list via helper para OLTS Alcatel 7360/7302 e Huawei, em caso de caso de Alcatel 7342 é necessário:
             <li>Deletar trio</li>
             <li>Desbloquear porta</li>
             <li>Criar trio</li>
         </p>
-        <img src="images/sem_sincro_v1/imagem5.png" alt="sem_sincro_v1"width="400px"height="300px">
-        <img src="images/sem_sincro_v1/imagem6.png" alt="sem_sincro_v1"width="400px"height="300px">
+        <img class="noHover" src="images/sem_sincro_v1/imagem5.png" alt="sem_sincro_v1"width="400px"height="300px">
+        <img class="noHover" src="images/sem_sincro_v1/imagem6.png" alt="sem_sincro_v1"width="400px"height="300px">
         <p>Caso esteja tudo certo com a posição do seu cliente e ele não esteja com vlan duplicada (em caso de Huawei ou Alcatel 7342) o cliente vai <strong class="red">sincronizar</strong>.</p>
-        <img src="images/sem_sincro_v1/imagem7.png" alt="sem_sincro_v1"width="500px"height="500px">
+        <img class="noHover" src="images/sem_sincro_v1/imagem7.png" alt="sem_sincro_v1"width="500px"height="500px">
         <p>Caso não sincronize o próximo passo é a busca de alarme, você pode buscar via helper ou putty, dúvidas de como buscar alarme via putty <a href="putty.html" target="_self">clique aqui</a>.</p>
     <p>(Vale lembrar que em caso de OLT Alcatel 7342 o ideal é buscar alarme com as vlans deletadas.)</p>
         <p>Agora o atendimento pode tomar alguns rumos:</p>
@@ -48,6 +53,8 @@
     <p>Alarme na posição correta;
         <li>Necessário trocar hgu, e se não sincronizar acionar centro de gerência.</li>
     </p>
+   <p>Vale lembrar que após sincronizar é necessario validar autenticação, pois visualmente no fisico sem sincronismo e sem autenticação são a mesma coisa. </p>
+   <p>Se aba de autenticação est</p>
     <h3>Guia básico - Sem sincronismo cliente vivo 1 SIBEL</h3>
     </div>
 
@@ -66,11 +73,11 @@
             <img src="images/Alcatel v1/Imagem 1.jpg" alt="Putty" >
             <h5>Como verificar alarme via Putty</h5>
         </div>
-        <div id="card2">
+        <div id="card2" onclick="sigres()">
             <img src="images/cards/Como converter cabo e primaria - sigres.jpg" alt="CaboPrimariaSigres">
             <h5>Como converter Slot e Porta para Cabo e Primária via  Sigres</h5>
         </div>
-        <div id="card3">
+        <div id="card3" onclick="tbs()">
             <img src="images/cards/Como converter sp no TBS.jpg" alt="SplitterTBS">
             <h5>Como converter Slot e Porta para Splitter (SP) via TBS</h5>
         </div>
