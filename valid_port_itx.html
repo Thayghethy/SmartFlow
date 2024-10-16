@@ -500,10 +500,10 @@
 
 </body>
 <script>
-    // Obtém o botão
+
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-// Quando o usuário rolar para baixo 20px, mostra o botão
+
 window.onscroll = function() {
 if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
    scrollToTopBtn.style.display = 'block';
@@ -512,11 +512,11 @@ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 }
 };
 
-// Quando o botão é clicado, rola para o topo da página
+
 scrollToTopBtn.onclick = function() {
 window.scrollTo({
    top: 0,
-   behavior: 'smooth' // Rola suavemente para o topo
+   behavior: 'smooth' 
 });
 };
 </script>
