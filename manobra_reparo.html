@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/tuto_style_geral.css">
+    <script src="script.js"></script>
+    <title>Manobra reparo</title>
+    <style>
+        .noHover:hover {
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <span id="home" class="material-symbols-outlined" onclick="home()">
+      home
+    </span>
+    <div>
+        <h3>Atualização de procedimento - Manobra reparo</h3>
+        <img class="noHover" src="images/manobra_reparo/imagem1.jpg"alt="manobra.reparo">
+        <p> <strong class="yellow">Detalhamento do processo de manobra primária em Reparo</strong></p>
+        <p> <strong>Atenção</strong>, não é permitido executar manobra fibra primária em  <strong class="red">Reparo</strong>. Porta OLT quando apresenta defeito ou falha de sincronismo, é condição de massiva, portanto, manobra não é a solução para um HGU único estar sem link/sincronismo.</p>
+        <p>Essa diretriz se aplica para a <strong>rede Vivo1</strong> e <strong>rede Vivo2</strong>.</p>
+        <p>As facilidades que se encontram no campo PORTA FÍSICA da ordem de serviço devem ser respeitadas.</p>
+        <p> <strong>Exceção mapeada</strong>:  <strong class="yellow">Reparo</strong> pós ME (<strong>Mudança de Endereço</strong>) dentro de um período de 30 dias.</p>
+        <img class="noHover" src="images/manobra_reparo/imagem2.png" alt="manobra.reparo"width="700px"height="350px">
+        <p>Duvidas consulte seu supervisor.</p>
+        <img class="noHover" src="images/manobra_reparo/imagem3.jpg" alt="manobra.reparo">
+        
+    </div>
+    <h3 id="cardTitulo">Cards relacionados com sua busca:</h3>
+    <section id="cards">
+        
+        <div id="card1" onclick="alarmePutty()">
+            <img src="images/Alcatel v1/Imagem 1.jpg" alt="Putty" >
+            <h5>Como verificar alarme via Putty</h5>
+        </div>
+        <div id="card2" onclick="sigres()">
+            <img src="images/cards/Como converter cabo e primaria - sigres.jpg" alt="CaboPrimariaSigres">
+            <h5>Como converter Slot e Porta para Cabo e Primária via  Sigres</h5>
+        </div>
+        <div id="card3" >
+            <img src="images/manobrav1/img11.png" alt="ManobraV1" onclick="manobraV1()">
+            <h5>Como realizar manobra de Vivo 1 via CPQD</h5>
+        </div>
+    </section>
+</body>
+</html>
