@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/tuto_style_geral.css">
+    <script src="script.js"></script>
+    <title>Validação de Portabilidade ITX</title>
+    <style>
+        .principal {
+            font-size: 1.3em;
+            padding: 2px;
+        }
+        ul {
+            background-color: white;
+            list-style: none;
+            margin-left: 0;
+            padding-left: 10px;
+            text-align: left;
+        }
+        h4 {
+            background-color: white;
+            font-size: 1.8em;
+            padding: 5px;
+        }
+        h5 {
+            font-size: 1.8em;
+        }
+        p{
+            font-size: 1em;
+        }
+        h6{
+            font-weight: bold;
+            font-size: 1.3em;
+            background-color: white;
+            padding: 5px;
+        }
+        .listaNormal {
+            text-align: center;
+            list-style: circle;
+            list-style-position: inside;
+        }
+        a {
+            text-decoration: none;
+        }
+        section {
+            background-color: white;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: black;
+            padding-left: 12px ;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #000;
+            color: #fff;
+        }
+        .sp-c, .sp-i, .rj, .es, .mg, .pr, .sc, .rs, .df, .ba, .pe, .am, .rr, .ap {
+            background-color: #666666;
+            color: #fff;
+        }
+        .pa-green, .ma-green {
+            background-color: #33cc33;
+            color: #fff;
+        }
+        .pa-yellow {
+            background-color: #999900;
+            color: #fff;
+        }
+        .scrollToTop {
+            position: fixed;
+            bottom: 20px; 
+            right: 20px; 
+            background-color: #4CAF50; 
+            color: white; 
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            display: none; 
+        }
+        .scrollToTop:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <span id="home" class="material-symbols-outlined" onclick="home()">
+        home
+      </span>
+
+    <div>
+        <h3>Validação de Portabilidade ITX</h3>
+        <h5>Sumário:</h5>
+        <ul>
+            <li class="principal"><a href="#1">1. Acessos Gaus</a></li>
+            <ul>
+                <li><a href="#1.1">1.1 VPN Cisco</a></li>
+                <li><a href="#1.2">1.2 Taishan U2020DSP</a></li>
+                <li><a href="#1.3">1.3 VMP V1</a></li>
+                <li><a href="#1.4">1.4 VMP V2</a></li>
+            </ul>
+            <li class="principal"><a href="#2">2. Validação de Bloqueios</a></li>
+            <ul>
+                <li><a href="#2.1">2.1 Consulta Bloqueio Gestor de Bloqueio</a></li>
+                <li><a href="#2.2">2.2 Consulta Bloqueio BIO</a></li>
+                <li><a href="#2.3">2.3 Consulta Bloqueio VMP (via base de referência)</a></li>
+            </ul>
+            <li class="principal"><a href="#3">3. Portabilidade</a></li>
+            <ul>
+                <li><a href="#3.1">3.1 Validando PTS V2</a></li>
+                <li><a href="#3.2">3.2 Validando PTS V1</a></li>
+                <li><a href="#3.3">3.3 Validando PTS Móvel (U2020 - DSP)</a></li>
+                <li><a href="#3.4">3.4 Corrigindo PTS V2</a></li>
+                <li><a href="#3.5">3.5 Corrigindo PTS V1</a></li>
+                <li><a href="#3.6">3.6 Corrigindo PTS Móvel</a></li>
+            </ul>
+            <li class="principal"><a href="#4">4. Chamados Vivo Now</a></li>
+            <ul>
+                <li><a href="#4.1">4.1 Corrigir PTS Vivo 2</a></li>
+                <li><a href="#4.2">4.2 Corrigir PTS Vivo Móvel</a></li>
+            </ul>
+        </ul>
+        <section>
+            <h4 id="1">1. Acessos Gaus</h4>
+                <h6 id="1.1">1.1 VPN Cisco</h6>
+                <img src="images/portabilidade_itx/Imagem1.jpg" alt="ITX1" width="800px">
+                <h6 id="1.2">1.2 Taishan U2020 DSP</h6>
+                <img src="images/portabilidade_itx/Imagem2.jpg" alt="ITX2" width="800px">
+                <img src="images/portabilidade_itx/Imagem3.jpg" alt="ITX3" width="800px">
+                <h6 id="1.3">1.3 VMP V1</h6>
+                <img src="images/portabilidade_itx/Imagem4.jpg" alt="ITX4" width="800px">
+                <h6 id="1.4">1.4 VMP V2</h6>
+                <img src="images/portabilidade_itx/Imagem5.jpg" alt="ITX5" width="800px">
+                <img src="images/portabilidade_itx/Imagem6.jpg" alt="ITX6">
+            <h4 id="2">2. Validação de Bloqueios</h4>
+                <h6 id="2.1">2.1 Consulta bloqueio Gestor de Bloqueios</h6>
+                <p>Para acessar o gestor, <a href="http://gestordebloqueios.gvt.net.br/spmweb/pages/geral.xhtml" target="_blank">clique aqui.</a></p>
+                <img src="images/portabilidade_itx/Imagem7.jpg" alt="ITX7">
+                <p>Qualquer restrição comercial estará descrita nas colunas Status/Motivo</p>
+                <img src="images/portabilidade_itx/Imagem8.jpg" alt="ITX8">
+                <p>Os casos em que a causa da abertura do defeito for alguma restrição comercial, devemos encerrar o BD como indevido CRM e orientar o cliente a resolver com o comercial.</p><br><br>
+                <p>Para os casos de interrupção do cliente, mas a restrição é parcial, seguir com o Troubleshooting normalmente.</p>
+                <h6 id="2.2">2.2 Consulta Bloqueio BIO</h6>
+                <p>O bloqueio BIO, utilizado em portabilidades em venda de oferta (instala o número correto e mantém ele bloqueado até a janela de portabilidade), é configurado com:
+                </p>
+                <ul class="listaNormal">
+                    <li>Adição de IFC XX9 (HSS -> HSIFC)</li>
+                    <li>Supressão ENUM (ENS -> DNAPTREC)</li>
+                    <li>Bloqueios ATS (SBR legado e MSR OneCore) para originar (LMTGRP=9001) + para receber (INRST=1) e para receber a cobrar (NSSCCA=0)</li>
+                </ul> <br>
+                <p>Para remover, utilizar comandos gerados no HELPER.</p>
+                <h6 id="2.3">2.3 Consulta Bloqueio VMP (via base de referência)</h6>
+                <p>A restrição no PTS é separada em 3 partes:</p> <br>
+                <ul class="listaNormal">
+                    <li>CCTANFR (AntiFraude)</li>
+                    <li>DESTBAR (Destino barrado, cliente não recebe chamadas)</li>
+                    <li>CCT_INAD (Inadimplência, o cliente só efetua para o número de emergência)</li>
+                </ul> <br>
+                <p>Como consultar?</p><br>
+                <p>1º Acessar a base de referência para cada um dos elementos.</p><br>
+                <img src="images/portabilidade_itx/Imagem9.jpg" alt="ITX9">
+                <img src="images/portabilidade_itx/Imagem10.jpg" alt="ITX10">
+                <p>Ou</p><br>
+                <img src="images/portabilidade_itx/Imagem11.jpg" alt="ITX11">
+                <p>Ou</p><br>
+                <img src="images/portabilidade_itx/Imagem12.jpg" alt="ITX12">
+                <p>2º Criar um filtro para efetuar a pesquisa</p>
+                <img src="images/portabilidade_itx/Imagem13.jpg" alt="ITX13">
+                <img src="images/portabilidade_itx/Imagem14.jpg" alt="ITX14">
+                <img src="images/portabilidade_itx/Imagem15.jpg" alt="ITX15">
+                <p>**Só efetuar a pesquisa, após aplicar o filtro.</p>
+                <img src="images/portabilidade_itx/Imagem16.jpg" alt="ITX16">
+                <p>Se aparecer a informação "Nenhum resultado encontrado", não existe referência para este bloqueio.</p><br>
+                <p>Se aparecer um resultado após a busca, cliente tem bloqueio.</p><br>
+                <p>3º Para retirar o bloqueio:</p>
+                <img src="images/portabilidade_itx/Imagem17.jpg" alt="ITX17">
+                <p>Escolher o objeto de aprovisionamento</p>
+                <img src="images/portabilidade_itx/Imagem18.jpg" alt="ITX18">
+                <img src="images/portabilidade_itx/Imagem19.jpg" alt="ITX19">
+                <p>Adicionar linhas</p>
+                <img src="images/portabilidade_itx/Imagem20.jpg" alt="ITX20">
+                <p>Após a inserção do comando com instância, clicar em aprovisionar</p>
+                <img src="images/portabilidade_itx/Imagem21.jpg" alt="ITX21">
+                <p>Pronto, bloqueio do elemento escolhido removido.</p>
+            <h4 id="3">3. Portabilidade</h4>
+                <p>Conceito:</p>
+                <img src="images/portabilidade_itx/Imagem22.jpg" alt="ITX22">
+                <img src="images/portabilidade_itx/Imagem23.jpg" alt="ITX23">
+                <h6 id="3.1">3.1 Validando PT V2</h6>
+                <p>Acesse o PNADMIN <a href="http://pnadmin.gvt.com.br/pn/pn.jsp">clicando aqui</a></p>
+                <img src="images/portabilidade_itx/Imagem24.jpg" alt="ITX24">
+                <img src="images/portabilidade_itx/Imagem25.jpg" alt="ITX25">
+                <p>Ou VMP V2 (<a href="http://10.140.68.14:8080/intweb/" target="_blank">link 1</a> ou <a href="https://efikagps.gvt.com.br/intweb/" target="_blank">link 2</a> via VPN)</p>
+                <img src="images/portabilidade_itx/Imagem26.jpg" alt="ITX26"><br>
+                <img src="images/portabilidade_itx/Imagem27.jpg" alt="ITX27"><br>
+                <img src="images/portabilidade_itx/Imagem28.jpg" alt="ITX28"><br>
+                <img src="images/portabilidade_itx/Imagem29.jpg" alt="ITX29"><br>
+                <img src="images/portabilidade_itx/Imagem30.jpg" alt="ITX30"><br>
+                <img src="images/portabilidade_itx/Imagem31.jpg" alt="ITX31"><br>
+                <img src="images/portabilidade_itx/Imagem32.jpg" alt="ITX32"><br>
+                <img src="images/portabilidade_itx/Imagem33.jpg" alt="ITX33"><br>
+                <p>Para vivo2, os campos necessários para criar encaminhamento para alguma central, serão necessários os seguintes campos:</p> <br>
+                <p>CNL -> validar eta/wfm/pnadmin <br>
+                    CPT -> NAO (indica numero retail == corporativo não) <br>
+                    CRE -> 125 (condição de retorno) <br>
+                    NTL-> instancia (numero de lista) <br>
+                    RN1-> 55215 (RN1 vivo2) <br>
+                    RN2-> central que sera feito o encaminhamento (lista <a href="http://svuxpreg1/wiki/index.php/Pointcodes" target="_blank">aqui</a>) <br> 
+                    TPB -> PREST (sempre) <br>
+                    </p>
+                <h6 id="3.2">3.2 Validando PTS V1</h6>
+                <p>VMP V1 (<a href="http://svuxpreg1/wiki/index.php/Pointcodes" target="_blank">Link 1</a> ou <a href="http://svuxpreg1/wiki/index.php/Pointcodes" target="_blank">Link 2</a> via VPN)</p> <br>
+                <p>Mesmo caminho dos prints da Vivo 2</p> <br>
+                <p>Ou via SOC, AS_CO e AS_PL</p> <br>
+                <p>Para Vivo 1, os campos necessários para criar encaminhamento para alguma central, serão necessários os seguintes campos:</p> <br>
+                <p>
+                    CNL -> validar eta/wfm/pnadmin <br>
+                    EIP -> domain IMS (lista em terus centrais)<br>
+                    NTL-> instancia (numero de lista)<br>
+                    NUE-> RN2 (informação em terus GNP)<br>
+                    NUF-> repete a instancia<br>
+                    RN1-> 55115 (RN1 vivo1)<br>
+                    TPB -> END para prefixos vivo e PREST prefixos de outras operadoras.<br>
+                </p>
+                <h6 id="3.3">3.3 Validando PTS Móvel (U2020 - DSP)</h6>
+                <p>Escolhendo os elementos corretos para pesquisa:</p>
+                <h6>PTS VIVO MÓVEL</h6>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>UF</th>
+                            <th>CN / Área</th>
+                            <th>PTS</th>
+                            <th>Nomenclatura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="sp-c">
+                            <td rowspan="3">SP_C</td>
+                            <td>11 / 12 / 13</td>
+                            <td>VVJC (JR3)</td>
+                            <td>JAGUARÉ</td>
+                        </tr>
+                        <tr class="sp-c">
+                            <td>11 / 12 / 13</td>
+                            <td>VIVC (SD3)</td>
+                            <td>SEDE</td>
+                        </tr>
+                        <tr class="sp-c">
+                            <td>11 / 12 / 13</td>
+                            <td>JAGB (INTERNACIONAL)</td>
+                            <td>JAGUARÉ B</td>
+                        </tr>
+                        <tr class="sp-i">
+                            <td rowspan="3">SP_I</td>
+                            <td>14 / 15 / 16 / 17 / 18 / 19</td>
+                            <td>CTNA</td>
+                            <td>JARDIM CONTORNO</td>
+                        </tr>
+                        <tr class="sp-i">
+                            <td>14 / 15 / 16 / 17 / 18 / 19</td>
+                            <td>BONA</td>
+                            <td>BONFIM</td>
+                        </tr>
+                        <tr class="sp-i">
+                            <td>14 / 15 / 16 / 17 / 18 / 19</td>
+                            <td>NITC</td>
+                            <td>NITERÓI</td>
+                        </tr>
+                        <tr class="rj">
+                            <td rowspan="2">RJ</td>
+                            <td>21 / 22 / 24</td>
+                            <td>BARC</td>
+                            <td>BARRA C</td>
+                        </tr>
+                        <tr class="rj">
+                            <td>21 / 22 / 24</td>
+                            <td>BARB (INTERNACIONAL)</td>
+                            <td>BARRA B</td>
+                        </tr>
+                        <tr class="es">
+                            <td rowspan="2">ES</td>
+                            <td>27 / 28</td>
+                            <td>BFEA</td>
+                            <td>BENTO FERREIRA</td>
+                        </tr>
+                        <tr class="es">
+                            <td>27 / 28</td>
+                            <td>SNEA</td>
+                            <td>SANTOS NEVES</td>
+                        </tr>
+                        <tr class="mg">
+                            <td rowspan="2">MG</td>
+                            <td>3x</td>
+                            <td>LUEB</td>
+                            <td>LUXEMBURGO</td>
+                        </tr>
+                        <tr class="mg">
+                            <td>3x</td>
+                            <td>SAGB</td>
+                            <td>SANTO AGOSTINHO</td>
+                        </tr>
+                        <tr class="pr">
+                            <td>PR</td>
+                            <td>4x</td>
+                            <td>CBRA</td>
+                            <td>CABRAL</td>
+                        </tr>
+                        <tr class="sc">
+                            <td>SC</td>
+                            <td>4x</td>
+                            <td>FNSA</td>
+                            <td>FLORIANÓPOLIS</td>
+                        </tr>
+                        <tr class="rs">
+                            <td rowspan="2">RS</td>
+                            <td>5x</td>
+                            <td>BVTA</td>
+                            <td>BELA VISTA</td>
+                        </tr>
+                        <tr class="rs">
+                            <td>5x</td>
+                            <td>INDA</td>
+                            <td>INDEPENDÊNCIA</td>
+                        </tr>
+                        <tr class="df">
+                            <td rowspan="2">DF/GO/TO/MT/MS/AC/RO</td>
+                            <td>6x</td>
+                            <td>TCOB</td>
+                            <td>ESTAÇÃO CENTRO NORTE</td>
+                        </tr>
+                        <tr class="df">
+                            <td>6x</td>
+                            <td>TCEB</td>
+                            <td>ESTAÇÃO CENTRO SUL</td>
+                        </tr>
+                        <tr class="ba">
+                            <td rowspan="2">BA/SE</td>
+                            <td>7x</td>
+                            <td>TCSB</td>
+                            <td>TELEBAHIA CELULAR SEDE</td>
+                        </tr>
+                        <tr class="ba">
+                            <td>7x</td>
+                            <td>VLA.B</td>
+                            <td>VILA LAURA</td>
+                        </tr>
+                        <tr class="pe">
+                            <td rowspan="2">PE/PB/PI/CE/AL/RN</td>
+                            <td>8x</td>
+                            <td>RCEA</td>
+                            <td>RECIFE</td>
+                        </tr>
+                        <tr class="pe">
+                            <td>8x</td>
+                            <td>FLAA</td>
+                            <td>FORTALEZA</td>
+                        </tr>
+                        <tr class="pa-green">
+                            <td rowspan="2">PA</td>
+                            <td>91 / 94 / 98</td>
+                            <td>PIEB</td>
+                            <td>PIEDADE</td>
+                        </tr>
+                        <tr class="ma-green">
+                            <td>98 / 99</td>
+                            <td>SFRB</td>
+                            <td>SÃO FRANCISCO</td>
+                        </tr>
+                        <tr class="am">
+                            <td rowspan="2">AM</td>
+                            <td>92 / 97</td>
+                            <td>DPDA</td>
+                            <td>DOM PEDRO A</td>
+                        </tr>
+                        <tr class="am">
+                            <td>92 / 97</td>
+                            <td>DPDB</td>
+                            <td>DOM PEDRO B</td>
+                        </tr>
+                        <tr class="pa-yellow">
+                            <td rowspan="2">PA</td>
+                            <td>93</td>
+                            <td>ATMA</td>
+                            <td>ALTAMIRA</td>
+                        </tr>
+                        <tr class="pa-yellow">
+                            <td>93</td>
+                            <td>PFTA</td>
+                            <td>PREFEITURA</td>
+                        </tr>
+                        <tr class="rr">
+                            <td>RR</td>
+                            <td>95 / 96</td>
+                            <td>CTRA</td>
+                            <td>BOA VISTA</td>
+                        </tr>
+                        <tr class="ap">
+                            <td>AP</td>
+                            <td>95 / 96</td>
+                            <td>LAGA</td>
+                            <td>LAGUINHO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <p>Acessar elementos SG7000 e selecionar os elementos para a localidade selecionada.</p>
+            <img src="images/portabilidade_itx/Imagem34.jpg" alt="ITX34">
+            <p>Comandos a serem executados:</p> <br>
+            <p>LST SERUATTR -> NUM -> "55+terminal"</p><br>
+            <img src="images/portabilidade_itx/Imagem35.jpg" alt="ITX35">
+            <p>Procurar por Routing Number Index</p>
+            <img src="images/portabilidade_itx/Imagem36.jpg" alt="ITX36">
+            <p>LST MNPROUTENUM -> Index -> "Routing index number" comando anterior</p>
+            <img src="images/portabilidade_itx/Imagem37.jpg" alt="ITX37">
+            <p>LST MNPROUTENUM:MODE=idx,IDX=5542;</p><br>
+            <p>PTSCBRA</p>
+            <img src="images/portabilidade_itx/Imagem38.jpg" alt="ITX38">
+            <p>LST MNPROUTENUM:MODE=idx,IDX=5547;</p><br>
+            <p>PTSFNSA</p><br>
+            <img src="images/portabilidade_itx/Imagem40.jpg" alt="ITX40">
+            <p>Campo Description deverá orientar para qual rede a chamada está configurada.</p><br>
+            <h6 id="3.4">Corrigindo PTS V2</h6>
+            <p>Acesse o SAS <a href="http://gvtapp/sas/portability" target="_blank">aqui</a></p>
+            <img src="images/portabilidade_itx/Imagem41.jpg" alt="ITX41">
+            <p>Via VMP (<a href="http://10.140.68.14:8080/intweb/login.jsp" target="_blank">Link 1</a> ou <a href="https://efikagps.gvt.com.br/intweb/" target="_blank">Link 2</a> VPN)</p>
+            <img src="images/portabilidade_itx/Imagem42.jpg" alt="ITX42"><br>
+            <img src="images/portabilidade_itx/Imagem43.jpg" alt="ITX43"><br>
+            <img src="images/portabilidade_itx/Imagem44.jpg" alt="ITX44"><br>
+            <p>Procurar RN2 correspondente <a href="http://svuxpreg1/wiki/index.php/Pointcodes" target="_blank">aqui</a></p>
+            <h6 id="3.5">3.5 Corrigindo PTS V1</h6>
+            <p>Via VMP (<a href="http://10.229.96.55:8080/intweb/" target="_blank">Link 1</a> ou <a href="http://10.229.96.55:8080/intweb/">Link 2</a> VPN)</p>
+            <img src="images/portabilidade_itx/Imagem45.jpg" alt="ITX45"><br>
+            <img src="images/portabilidade_itx/Imagem46.jpg" alt="ITX46"><br>
+            <img src="images/portabilidade_itx/Imagem47.jpg" alt="ITX47"><br>
+            <p>** Se prefixo de origem telefônica/GVT, o TPB sempre será END. Para prefixos de outras origens, sempre utilizar PREST.</p><br>
+            <p>O Campo NUE é o RN2, ele pode ser encontrado no TERUS GNP</p><br>
+            <img src="images/portabilidade_itx/Imagem48.jpg" alt="ITX48">
+            <img src="images/portabilidade_itx/Imagem49.jpg" alt="ITX49">
+            <p>O campo EIP, pode ser encontrado no Terus Centrais</p>
+            <img src="images/portabilidade_itx/Imagem50.jpg" alt="ITX50">
+            <img src="images/portabilidade_itx/Imagem51.jpg" alt="ITX51">
+            <h6 id="3.6">3.6 Corrigindo PTS Móvel</h6>
+            <p>
+                Script de Criação (Terminal;Ação;RN1;CNL;Tipo) <br>
+                1145220748;Activate;55125;11326;DDR <br>
+
+                Script de Supressão (Terminal;Ação;RN1;CNL;Tipo) <br>
+                1145220748;Cancel;;11326;DDR <br>
+                Salvar em arquivo *.txt e copiar para o endereço \\BRTLVBGB0046PL\Entrada  <br>
+                **O arquivo será consumido em até 5 minutos. <br> 
+                Após a execução, pode-se conferir o resultado em \\BRTLVBGB0046PL\Saida <br>
+            </p>
+        <h4 id="4">4. Chamados Vivo Now</h4>
+            <h6 id="4.1">4.1 Corrigir PTS Vivo 2</h6>
+            <img src="images/portabilidade_itx/Imagem52.jpg" alt="ITX52"><br>
+            <img src="images/portabilidade_itx/Imagem53.jpg" alt="ITX53"><br>
+            <img src="images/portabilidade_itx/Imagem54.jpg" alt="ITX54"><br>
+            <p>Ao final do chamado será solicitado a inserção de uma evidência em anexo, que poderá ser o print do PTS.</p><br>
+            <p>Após a abertura do VIVO NOW, é só aguardar a resposta.</p><br>
+            <p>OBS.: Não esquecer de selecionar o campo Produto: FIXA (destacado em vermelho acima, para correção do PTS da FIXA) e o carimbo com as informações: <br>
+                Terminal portado para VIVO2 sem dados de portabilidade no TERUS, favor reprocessar a linha e atualizar todos os sistemas. <br>
+                NTL: 5137486930  <br>
+                RN1: 55125 <br>
+                CNL: 51153 <br>
+                Tipo de linha: Basic <br>
+                </p>
+            <h6 id="4.2">4.2 Corrigir PTS Vivo Móvel</h6>
+            <img src="images/portabilidade_itx/Imagem55.jpg" alt="ITX55"><br>
+            <img src="images/portabilidade_itx/Imagem56.jpg" alt="ITX56"><br>
+            <img src="images/portabilidade_itx/Imagem57.jpg" alt="ITX57"><br>
+            <p>Ao final do chamado será solicitado a inserção de uma evidência em anexo, que poderá ser o print do PTS. <br>
+                Após a abertura do VIVO NOW, é só aguardar a resposta. <br>
+            </p>
+            <p>OBS.: Não esquecer de selecionar o campo Produto: Móvel (destacado em vermelho acima, para correção do PTS da móvel) e o carimbo com as informações:  <br>
+                BROADCAST <br>
+                Encaminhar esse chamando para VIVO_OCS_SUSTENTACAO aos cuidados de Gerson Tokokasu Ifa. <br> 
+                Operadora:  <br>
+                Terminal:  <br> 
+                Order Action: Activate <br>
+                RN1:  <br>
+                CNL: <br>  
+                LT: <br>
+                </p>
+        </section>
+    </div>
+    <button class="scrollToTop" id="scrollToTopBtn">Voltar ao Topo</button>
+
+</body>
+<script>
+    // Obtém o botão
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Quando o usuário rolar para baixo 20px, mostra o botão
+window.onscroll = function() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+   scrollToTopBtn.style.display = 'block';
+} else {
+   scrollToTopBtn.style.display = 'none';
+}
+};
+
+// Quando o botão é clicado, rola para o topo da página
+scrollToTopBtn.onclick = function() {
+window.scrollTo({
+   top: 0,
+   behavior: 'smooth' // Rola suavemente para o topo
+});
+};
+</script>
+</html>
