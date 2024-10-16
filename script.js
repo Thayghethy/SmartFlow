@@ -10,6 +10,7 @@ const articles = [
     { title: "Básico - Web Radius", content: "Tutorial básico Web Radius", link:"tuto_webradius.html" },
     { title: "Consultar linha via SPG", content: "Como consultar registro da linha via spg", link:"ConsultaLinha.html" },
     { title: "Validação de Portabilidade ITX", content: "Como consultar Validação de Portabilidade ITX", link:"valid_port_itx.html" },
+    { title: "Atualização de procedimento - Manobra reparo", content: "Detalhamento do processo de manobra primária em Reparo", link:"manobra_reparo.html" },
 ];
 
 document.getElementById('searchBox').addEventListener('input', function() {
