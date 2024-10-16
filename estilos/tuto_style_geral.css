@@ -50,6 +50,7 @@ p {
 }
 
 img {
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.425);
 }
@@ -68,6 +69,11 @@ img {
 
 h3, p, strong, a, img {
     background-color: white;
+}
+
+img:hover {
+    width: 1000px;
+    height: auto;
 }
 /*Estilos para os cards*/
 #cardTitulo{

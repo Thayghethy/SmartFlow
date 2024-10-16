@@ -9,6 +9,7 @@ const articles = [
     { title: "Como realizar mudança de RIN e Armário no TBS", content: "Para realizar a troca de RIN ou armário no TBS, siga esse passo a passo.", link: "convert_rin.html"},
     { title: "Básico - Web Radius", content: "Tutorial básico Web Radius", link:"tuto_webradius.html" },
     { title: "Consultar linha via SPG", content: "Como consultar registro da linha via spg", link:"ConsultaLinha.html" },
+    { title: "Validação de Portabilidade ITX", content: "Como consultar Validação de Portabilidade ITX", link:"valid_port_itx.html" },
 ];
 
 document.getElementById('searchBox').addEventListener('input', function() {
