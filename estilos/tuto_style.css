@@ -21,12 +21,12 @@ p {
     font-size: 1.2em;
 }
 
-img:hover {
+/*img:hover {
     width: 70vw;
     height: 100vh;
     transition: .5s ease-in-out;
     box-shadow: 2px 2px 2px #660099;
-}
+}*/
 
 .yellow {
     background-color: yellow;
