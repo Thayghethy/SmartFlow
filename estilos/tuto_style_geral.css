@@ -71,10 +71,10 @@ h3, p, strong, a, img {
     background-color: white;
 }
 
-img:hover {
+/*img:hover {
     width: 1000px;
     height: auto;
-}
+}*/
 /*Estilos para os cards*/
 #cardTitulo{
     text-align: center;
