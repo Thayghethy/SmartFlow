@@ -67,6 +67,10 @@ img {
     background-color: rgba(5, 184, 5, 0.5);
 }
 
+.purple {
+    background-color: rgba(218, 112, 214, 1);
+}
+
 h3, p, strong, a, img {
     background-color: white;
 }
