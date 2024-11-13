@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/tuto_style.css">
+    <script src="script.js"></script>
+    <title>Sem Link Vivo 2</title>
+</head>
+<body>
+    <body>
+    <div>
+    <h3>Sem Link - Vivo 2</h3> <br>
+
+    <p>Em casos que o técnico informa que está Sem Link, é sempre necessário
+    identificar se o mesmo possui Sincronismo, se está com a Carga correta
+    e se tem VLAN Criada. Para prosseguir com a trativa de cada caso.</p> <br>
+
+    <h3>Sincronismo</h3> <br> <br>
+
+    <p>*Para validar se o técnico possui sincronismo, primeiro é sempre necessário verificar se o Serial GPON está <strong>Associado</strong>*.<br>No wisetool é validado se possui sincronismo, na aba <strong>"Informações da OLT"</strong>, onde é possível verificar o status de Sincronismo e a potência que chega. No SDU, na aba Acesso, possui tambêm uma aba com <strong>"Informações da OLT"</strong>
+    </p> <br> <br>
+
+    <img class="imageLado" src="images/semlink/img1.png">   <img class="imageLado" src="images/semlink/img2.png"> <br> <br>
+
+    <p>É possível observar que em ambas as imagens o status de Sincronsismo se
+    encontram como DONW, ou seja, não possui sincronismo. Na potência ONT e OLT
+    é possível identificar a potência que o sistema está reconhecendo. Quando
+    a potência constar como <strong>-65dBm</strong> ou com <strong> 0dBm</strong> como no exemplo, enquanto o GPON está associado, é recomendado desassociar e
+    seguir com busca de <a href="">alarme</a>.
+    </p> <br> <br>
+
+
+    <h3>VLAN</h3> <br> <br>
+
+    <p>Quando o na aba Informações OLT, estiver com o sincronismo em UP, é necessário seguir com as validações de vlan e carga na Aba Banda Larga.</p> <br> <br>
+
+    <img class="imageLado" src="images/semlink/img3.png" > <img class="imageLado" src="images/semlink/img4.png" > <br> <br>
+
+    <p>O primeiro cenário que pode ser encontrado ao verificar as VLANS, que aparece no SDU na aba Banda Larga em <strong>Informações de Bridge</strong> ou no Wisetool em <strong>Informações PVC</strong>, se existe vlan criada. 
+    </p> <br> <br>
+
+    <img src="images/semlink/img5.png" class="imageLado"> <br> <br>
+
+    <p>Como no exemplo acima, o cliente não possuia vlan criada, então mesmo que houvese sincronismo, não seria possível estabelecer link. Em cenários, tanto no Wisetool, quanto no SDU, em que o cliente constar como Vlan não criada, é necessário efetuar a criação através do botão criar que surge na mesma aba de Bridge. E atualizar para ver se a vlan consta como "Sim". Se caso tentar criar a vlan, e surgir algum erro que impeça a criação, é necessário enviar integra para criar via gerência. Cliente Fibrasil e ATC não é possível criar enviando helper </p> <br><br>
+
+    <h3>Carga</h3> <br><br>
+
+    <p>Para a validaçõa da <strong>Carga</strong>, é verificado para clientes next, também na Aba banda Larga, porém, em <strong>Informações Profile AAA</strong>, e para clientes de origem Siebel, no wisetool, em <strong>Informações PSA</strong> ou <strong>Informações Radius.</strong> </p> <br>
+
+    <p>Para validar se existe algum problema com a carga, é preciso somente se atendar se existe alguma mensagem de divergência, ou se a carga consta em branco no sistemas:</p> <br> <br>
+
+    <img src="images/semlink/img6.png" class="imageLado"> <img src="images/semlink/img7.png" class="imageLado"> <br>
+
+    <p>Caso aparece mensagem de erro semelhante, é necessário apertar o botão de correção, que aparece logo abaixo <strong class="blue1">Atualizar PSA</strong>, ou <strong class="blue1">Atualizar Radius</strong>. Ao apertar a correção, deve-se atualizar a página para verificar se o erro persista.</p> <br>
+
+    <p>Caso o erro persista, tentar efetuar a correção atráves de helper para cargas PSA. Copiando o Pon em <strong>Informações de Serviço</strong> no zeus, ir para a aba principal do helper, selecionar <strong>TV GPON - Banda</strong> colar o Pon em BA-TT, clicar em Buscar e em seguida <strong>Realizar Validação</strong></p> <br>  <br>
+
+    <img src="images/semlink/img8.png" class="imageLado"> <img src="images/semlink/img9.png" class="imageLado"> <br> <br>
+
+    <p>Caso apresente erro ou falha nessa funcionalidade, deve-se copiar o nasport e nasip que o helper apresentou, e seguir para pesquisar por eles na página do weradius pelo navegador. No webradius, pesquisar pelo campo <strong>Consulta NasPort NasIp</strong> e preencher abaixo o <strong>NasPort</strong> e <strong>NasIp</strong> fornecidor pelo helper e Consultar.</p> <br> <br>
+
+
+    <img src="images/semlink/img10.png" class="imageLado"> <img src="images/semlink/img11.png" class="imageLado"> <br> <br>
+
+    <p>Ao consultar, caso apareça uma carga criada no WebRadius, é necessário verificar se está mostrando na carga o status <strong>Cliente Desconectado!</strong>, nesses cenários de cliente desconectado deve-se copiar o Designador da Carga, e atráves do WebRadius dar Baixa na carga, e então, após a baixo, tentar recriar pelo SDU ou WiseTool. Caso continue dando falha e para cenários de <strong>Cliente Conectado!</strong>, acionar o Coach para suporte.</p> <br><br>
+
+
+    <p>Caso feito todas as correções de Sincronismo, Vlan e Carga, e técnico informar que continua sem link seguir solicitando troca de HGU e confirmando com ele que está configurado para vivo 2, se necessário acionar o coach.</p> <br>
+
+
+
+
+
+    </div>
+</body>
+</html>
+
+<style type="text/css">
+    
+    .imageLado {
+
+    display: inline-flex !important;
+    border: 4px solid mediumpurple;
+    margin: 2px;
+
+}
+
+.blue1 {
+
+    background-color: rgba(0, 0, 255, 0.470);
+}
+</style>

@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #660099;
+}
+
+#home {
+    color:white;
+    cursor: pointer;
+    font-size: 4em;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#home :hover {
+    cursor: pointer;
+    font-size: 4.2em;
+    transition: .3s ease-in-out;
+}
+.region {
+    margin: 50px auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    width: 50%;
+}
+
+h4, h6 {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.3em;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #660099;
+    color: white;
+    cursor: pointer;
+}
+
+.iframe {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+iframe {
+    background-color: white;
+    display: none;
+    width: 60vw;
+    height: 63vh;
+    border-radius: 50px;
+}
+
+#toggleFullScreen {
+    display: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+}
+
+#toggleFullScreen:hover {
+    font-size: 2.2em;
+}
+
+.fullscreen {
+    width: 90vw;
+    height: 90vh;
+}
+
+.ont {
+    display: none;
+}
+
+/*Estilos para os cards*/
+#cardTitulo{
+    text-align: center !important;
+    color: white;
+    font-size: 2em;
+    display: none;
+}
+
+
+#cards {
+    text-align: center;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+#cards div {
+    margin: 10px 20px 30px 20px;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+}
+
+#cards div img {
+    border-radius: 2px;
+    width: 95%;
+    height: 90%;
+    object-fit: cover;
+}
+
+#card1 {
+    background-color: white;
+    border-radius: 6px;
+    font-size: 1.3em;
+}
+
+#card2 {
+    background-color: white;
+    border-radius: 6px;
+    font-size: 1.3em;
+}
+
+#card3 {
+    background-color: white;
+    border-radius: 6px;
+    font-size: 1.3em;
+}
+
+#card1:hover {
+    width: 220px;
+    height: 320px;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#card2:hover {
+    width: 220px;
+    height: 320px;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#card3:hover {
+    width: 220px;
+    height: 320px;
+    box-shadow: 3px 3px black;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+

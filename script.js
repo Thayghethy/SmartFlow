@@ -90,6 +90,15 @@ function toggleFullScreen() {
     }
 }
 
+//Função para sem sincronismo e sem link. Basicamente o mesmo do Putty, somente adaptado para escolha apenas de V1 e V2
+function sincro(frameId) {
+    resetIframes();
+    document.getElementById(frameId).style.display = 'block';
+    document.getElementById('cards').style.display = 'flex';
+    document.getElementById('cardTitulo').style.display = 'block';
+    document.getElementById('toggleFullScreen').style.display = 'inline-block';
+}
+
 function caboPrimariaHelper() {
     window.location.href = "convert_helper.html";
 }
@@ -115,7 +124,7 @@ function webradius() {
 }
 
 
-function webradius() {
+function linha() {
     window.location.href = "consultalinha.html"
 }
 
