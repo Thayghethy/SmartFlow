@@ -12,6 +12,7 @@ const articles = [
     { title: "Validação de Portabilidade ITX", content: "Como consultar Validação de Portabilidade ITX", link:"valid_port_itx.html" },
     { title: "Atualização de procedimento - Manobra reparo", content: "Detalhamento do processo de manobra primária em Reparo", link:"manobra_reparo.html" },
     { title: "Como consultar a LAN HOST - HDM", content: "Como consultar a LAN HOST - HDM", link:"consultalanhost.html" },
+    { title: "Abertura de ITX Vivo 1", content: "Como realizar a abertura de uma ITX Vivo 1", link:"itx_v1.html" },
 ];
 
 document.getElementById('searchBox').addEventListener('input', function() {
